@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D099798B1E53E47400635B45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D099798A1E53E47400635B45 /* AppDelegate.swift */; };
-		D099798D1E53E47400635B45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D099798C1E53E47400635B45 /* ViewController.swift */; };
+		D099798D1E53E47400635B45 /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D099798C1E53E47400635B45 /* SuggestionViewController.swift */; };
 		D09979901E53E47400635B45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D099798E1E53E47400635B45 /* Main.storyboard */; };
 		D09979921E53E47400635B45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D09979911E53E47400635B45 /* Assets.xcassets */; };
 		D09979951E53E47400635B45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D09979931E53E47400635B45 /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		D09979871E53E47400635B45 /* VIPER-Douban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIPER-Douban.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D099798A1E53E47400635B45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D099798C1E53E47400635B45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D099798C1E53E47400635B45 /* SuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
 		D099798F1E53E47400635B45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D09979911E53E47400635B45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D09979941E53E47400635B45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 				D099799F1E53E8F000635B45 /* Resource */,
 				D099799E1E53E8E400635B45 /* Config */,
 				D099798A1E53E47400635B45 /* AppDelegate.swift */,
-				D099798C1E53E47400635B45 /* ViewController.swift */,
+				D099798C1E53E47400635B45 /* SuggestionViewController.swift */,
 				D099798E1E53E47400635B45 /* Main.storyboard */,
 			);
 			path = "VIPER-Douban";
@@ -152,7 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D099798D1E53E47400635B45 /* ViewController.swift in Sources */,
+				D099798D1E53E47400635B45 /* SuggestionViewController.swift in Sources */,
 				D099798B1E53E47400635B45 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
