@@ -12,7 +12,18 @@
 		D09979901E53E47400635B45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D099798E1E53E47400635B45 /* Main.storyboard */; };
 		D09979921E53E47400635B45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D09979911E53E47400635B45 /* Assets.xcassets */; };
 		D09979951E53E47400635B45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D09979931E53E47400635B45 /* LaunchScreen.storyboard */; };
+		D09979A71E543EEC00635B45 /* VIPER_DoubanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09979A61E543EEC00635B45 /* VIPER_DoubanTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D09979A91E543EEC00635B45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D099797F1E53E47400635B45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D09979861E53E47400635B45;
+			remoteInfo = "VIPER-Douban";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D09979871E53E47400635B45 /* VIPER-Douban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIPER-Douban.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +33,20 @@
 		D09979911E53E47400635B45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D09979941E53E47400635B45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D09979961E53E47400635B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D09979A41E543EEC00635B45 /* VIPER-DoubanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VIPER-DoubanTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D09979A61E543EEC00635B45 /* VIPER_DoubanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPER_DoubanTests.swift; sourceTree = "<group>"; };
+		D09979A81E543EEC00635B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D09979841E53E47400635B45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D09979A11E543EEC00635B45 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				D09979891E53E47400635B45 /* VIPER-Douban */,
+				D09979A51E543EEC00635B45 /* VIPER-DoubanTests */,
 				D09979881E53E47400635B45 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				D09979871E53E47400635B45 /* VIPER-Douban.app */,
+				D09979A41E543EEC00635B45 /* VIPER-DoubanTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,6 +103,15 @@
 			name = Resource;
 			sourceTree = "<group>";
 		};
+		D09979A51E543EEC00635B45 /* VIPER-DoubanTests */ = {
+			isa = PBXGroup;
+			children = (
+				D09979A61E543EEC00635B45 /* VIPER_DoubanTests.swift */,
+				D09979A81E543EEC00635B45 /* Info.plist */,
+			);
+			path = "VIPER-DoubanTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -100,6 +132,24 @@
 			productReference = D09979871E53E47400635B45 /* VIPER-Douban.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D09979A31E543EEC00635B45 /* VIPER-DoubanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D09979AD1E543EEC00635B45 /* Build configuration list for PBXNativeTarget "VIPER-DoubanTests" */;
+			buildPhases = (
+				D09979A01E543EEC00635B45 /* Sources */,
+				D09979A11E543EEC00635B45 /* Frameworks */,
+				D09979A21E543EEC00635B45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D09979AA1E543EEC00635B45 /* PBXTargetDependency */,
+			);
+			name = "VIPER-DoubanTests";
+			productName = "VIPER-DoubanTests";
+			productReference = D09979A41E543EEC00635B45 /* VIPER-DoubanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -113,6 +163,11 @@
 					D09979861E53E47400635B45 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
+					};
+					D09979A31E543EEC00635B45 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D09979861E53E47400635B45;
 					};
 				};
 			};
@@ -130,6 +185,7 @@
 			projectRoot = "";
 			targets = (
 				D09979861E53E47400635B45 /* VIPER-Douban */,
+				D09979A31E543EEC00635B45 /* VIPER-DoubanTests */,
 			);
 		};
 /* End PBXProject section */
@@ -145,6 +201,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D09979A21E543EEC00635B45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -157,7 +220,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D09979A01E543EEC00635B45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D09979A71E543EEC00635B45 /* VIPER_DoubanTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D09979AA1E543EEC00635B45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D09979861E53E47400635B45 /* VIPER-Douban */;
+			targetProxy = D09979A91E543EEC00635B45 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D099798E1E53E47400635B45 /* Main.storyboard */ = {
@@ -296,6 +375,32 @@
 			};
 			name = Release;
 		};
+		D09979AB1E543EEC00635B45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "VIPER-DoubanTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "thoughtworks.VIPER-DoubanTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VIPER-Douban.app/VIPER-Douban";
+			};
+			name = Debug;
+		};
+		D09979AC1E543EEC00635B45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "VIPER-DoubanTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "thoughtworks.VIPER-DoubanTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VIPER-Douban.app/VIPER-Douban";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -316,6 +421,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		D09979AD1E543EEC00635B45 /* Build configuration list for PBXNativeTarget "VIPER-DoubanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D09979AB1E543EEC00635B45 /* Debug */,
+				D09979AC1E543EEC00635B45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
