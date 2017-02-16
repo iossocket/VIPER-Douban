@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2949DE589000B74004234BD7 /* Pods_VIPER_Douban.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 856A817414641CF71AC43A0F /* Pods_VIPER_Douban.framework */; };
+		83630AB3D75C90486B73B8B2 /* Pods_VIPER_DoubanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00EF110DC2D3780AE9C1CCA7 /* Pods_VIPER_DoubanTests.framework */; };
+		D08F1E321E55446000390532 /* SuggestionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08F1E311E55446000390532 /* SuggestionViewProtocol.swift */; };
 		D099798B1E53E47400635B45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D099798A1E53E47400635B45 /* AppDelegate.swift */; };
 		D099798D1E53E47400635B45 /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D099798C1E53E47400635B45 /* SuggestionViewController.swift */; };
 		D09979901E53E47400635B45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D099798E1E53E47400635B45 /* Main.storyboard */; };
 		D09979921E53E47400635B45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D09979911E53E47400635B45 /* Assets.xcassets */; };
 		D09979951E53E47400635B45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D09979931E53E47400635B45 /* LaunchScreen.storyboard */; };
 		D09979A71E543EEC00635B45 /* VIPER_DoubanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09979A61E543EEC00635B45 /* VIPER_DoubanTests.swift */; };
+		D09979AF1E54427200635B45 /* SuggestionInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09979AE1E54427200635B45 /* SuggestionInteractorProtocol.swift */; };
+		D09979B11E544D3600635B45 /* SuggestionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09979B01E544D3600635B45 /* SuggestionInteractor.swift */; };
+		D09979B31E54505500635B45 /* SuggestionPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09979B21E54505500635B45 /* SuggestionPresenterProtocol.swift */; };
+		D09979B51E54507500635B45 /* SuggestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09979B41E54507500635B45 /* SuggestionPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +33,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		003AC6D40A2CA5EF6BD08A7E /* Pods-VIPER-DoubanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-DoubanTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VIPER-DoubanTests/Pods-VIPER-DoubanTests.release.xcconfig"; sourceTree = "<group>"; };
+		00EF110DC2D3780AE9C1CCA7 /* Pods_VIPER_DoubanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPER_DoubanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		582C12E5D8CD629D75666390 /* Pods-VIPER-Douban.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-Douban.release.xcconfig"; path = "Pods/Target Support Files/Pods-VIPER-Douban/Pods-VIPER-Douban.release.xcconfig"; sourceTree = "<group>"; };
+		6B7E83D706BFD8BC50494D19 /* Pods-VIPER-Douban.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-Douban.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VIPER-Douban/Pods-VIPER-Douban.debug.xcconfig"; sourceTree = "<group>"; };
+		856A817414641CF71AC43A0F /* Pods_VIPER_Douban.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPER_Douban.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D08F1E311E55446000390532 /* SuggestionViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionViewProtocol.swift; sourceTree = "<group>"; };
 		D09979871E53E47400635B45 /* VIPER-Douban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIPER-Douban.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D099798A1E53E47400635B45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D099798C1E53E47400635B45 /* SuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +49,11 @@
 		D09979A41E543EEC00635B45 /* VIPER-DoubanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VIPER-DoubanTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09979A61E543EEC00635B45 /* VIPER_DoubanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPER_DoubanTests.swift; sourceTree = "<group>"; };
 		D09979A81E543EEC00635B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D09979AE1E54427200635B45 /* SuggestionInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionInteractorProtocol.swift; sourceTree = "<group>"; };
+		D09979B01E544D3600635B45 /* SuggestionInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionInteractor.swift; sourceTree = "<group>"; };
+		D09979B21E54505500635B45 /* SuggestionPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionPresenterProtocol.swift; sourceTree = "<group>"; };
+		D09979B41E54507500635B45 /* SuggestionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionPresenter.swift; sourceTree = "<group>"; };
+		F63CB8A8D6DFF171DA6C1312 /* Pods-VIPER-DoubanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-DoubanTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VIPER-DoubanTests/Pods-VIPER-DoubanTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2949DE589000B74004234BD7 /* Pods_VIPER_Douban.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +69,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83630AB3D75C90486B73B8B2 /* Pods_VIPER_DoubanTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BDD297D3A4E643433E35FCA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F63CB8A8D6DFF171DA6C1312 /* Pods-VIPER-DoubanTests.debug.xcconfig */,
+				003AC6D40A2CA5EF6BD08A7E /* Pods-VIPER-DoubanTests.release.xcconfig */,
+				6B7E83D706BFD8BC50494D19 /* Pods-VIPER-Douban.debug.xcconfig */,
+				582C12E5D8CD629D75666390 /* Pods-VIPER-Douban.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D08F1E301E55442800390532 /* Suggestion */ = {
+			isa = PBXGroup;
+			children = (
+				D099798C1E53E47400635B45 /* SuggestionViewController.swift */,
+				D08F1E311E55446000390532 /* SuggestionViewProtocol.swift */,
+				D09979AE1E54427200635B45 /* SuggestionInteractorProtocol.swift */,
+				D09979B01E544D3600635B45 /* SuggestionInteractor.swift */,
+				D09979B21E54505500635B45 /* SuggestionPresenterProtocol.swift */,
+				D09979B41E54507500635B45 /* SuggestionPresenter.swift */,
+			);
+			name = Suggestion;
+			sourceTree = "<group>";
+		};
 		D099797E1E53E47400635B45 = {
 			isa = PBXGroup;
 			children = (
 				D09979891E53E47400635B45 /* VIPER-Douban */,
 				D09979A51E543EEC00635B45 /* VIPER-DoubanTests */,
 				D09979881E53E47400635B45 /* Products */,
+				2BDD297D3A4E643433E35FCA /* Pods */,
+				F9440E1F2C3769C9FB1DC882 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,10 +123,10 @@
 		D09979891E53E47400635B45 /* VIPER-Douban */ = {
 			isa = PBXGroup;
 			children = (
+				D08F1E301E55442800390532 /* Suggestion */,
 				D099799F1E53E8F000635B45 /* Resource */,
 				D099799E1E53E8E400635B45 /* Config */,
 				D099798A1E53E47400635B45 /* AppDelegate.swift */,
-				D099798C1E53E47400635B45 /* SuggestionViewController.swift */,
 				D099798E1E53E47400635B45 /* Main.storyboard */,
 			);
 			path = "VIPER-Douban";
@@ -112,6 +158,15 @@
 			path = "VIPER-DoubanTests";
 			sourceTree = "<group>";
 		};
+		F9440E1F2C3769C9FB1DC882 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00EF110DC2D3780AE9C1CCA7 /* Pods_VIPER_DoubanTests.framework */,
+				856A817414641CF71AC43A0F /* Pods_VIPER_Douban.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +174,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D09979991E53E47400635B45 /* Build configuration list for PBXNativeTarget "VIPER-Douban" */;
 			buildPhases = (
+				756654D9126E7F06CAA467E6 /* [CP] Check Pods Manifest.lock */,
 				D09979831E53E47400635B45 /* Sources */,
 				D09979841E53E47400635B45 /* Frameworks */,
 				D09979851E53E47400635B45 /* Resources */,
+				13B15743B7043BA4F18428E4 /* [CP] Embed Pods Frameworks */,
+				AD3AD6654111E4150C7B0427 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,9 +194,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D09979AD1E543EEC00635B45 /* Build configuration list for PBXNativeTarget "VIPER-DoubanTests" */;
 			buildPhases = (
+				7252C6772A17B6962CD24D34 /* [CP] Check Pods Manifest.lock */,
 				D09979A01E543EEC00635B45 /* Sources */,
 				D09979A11E543EEC00635B45 /* Frameworks */,
 				D09979A21E543EEC00635B45 /* Resources */,
+				2187FCF6930E1C592542B623 /* [CP] Embed Pods Frameworks */,
+				29AB3F46589E9A7FBD4B00C9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,13 +271,111 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13B15743B7043BA4F18428E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VIPER-Douban/Pods-VIPER-Douban-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2187FCF6930E1C592542B623 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VIPER-DoubanTests/Pods-VIPER-DoubanTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29AB3F46589E9A7FBD4B00C9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VIPER-DoubanTests/Pods-VIPER-DoubanTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7252C6772A17B6962CD24D34 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		756654D9126E7F06CAA467E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AD3AD6654111E4150C7B0427 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VIPER-Douban/Pods-VIPER-Douban-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D09979831E53E47400635B45 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D09979B11E544D3600635B45 /* SuggestionInteractor.swift in Sources */,
 				D099798D1E53E47400635B45 /* SuggestionViewController.swift in Sources */,
 				D099798B1E53E47400635B45 /* AppDelegate.swift in Sources */,
+				D09979B31E54505500635B45 /* SuggestionPresenterProtocol.swift in Sources */,
+				D09979B51E54507500635B45 /* SuggestionPresenter.swift in Sources */,
+				D09979AF1E54427200635B45 /* SuggestionInteractorProtocol.swift in Sources */,
+				D08F1E321E55446000390532 /* SuggestionViewProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +510,7 @@
 		};
 		D099799A1E53E47400635B45 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B7E83D706BFD8BC50494D19 /* Pods-VIPER-Douban.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "VIPER-Douban/Info.plist";
@@ -364,6 +524,7 @@
 		};
 		D099799B1E53E47400635B45 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 582C12E5D8CD629D75666390 /* Pods-VIPER-Douban.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "VIPER-Douban/Info.plist";
@@ -377,6 +538,7 @@
 		};
 		D09979AB1E543EEC00635B45 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F63CB8A8D6DFF171DA6C1312 /* Pods-VIPER-DoubanTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "VIPER-DoubanTests/Info.plist";
@@ -390,6 +552,7 @@
 		};
 		D09979AC1E543EEC00635B45 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 003AC6D40A2CA5EF6BD08A7E /* Pods-VIPER-DoubanTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "VIPER-DoubanTests/Info.plist";
@@ -429,6 +592,7 @@
 				D09979AC1E543EEC00635B45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

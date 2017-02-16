@@ -4,7 +4,7 @@
 
 import UIKit
 
-class SuggestionViewController: UIViewController {
+class SuggestionViewController: UIViewController, SuggestionViewProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
