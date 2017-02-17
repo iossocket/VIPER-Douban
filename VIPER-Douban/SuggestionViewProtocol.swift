@@ -8,6 +8,7 @@
 
 import Foundation
 
-protocol SuggestionViewProtocol {
-    
+protocol SuggestionViewProtocol: class {
+    var presenter: SuggestionPresenterProtocol? { get set }
+    func displayMovies(movies: Array<Movie>)
 }

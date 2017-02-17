@@ -10,4 +10,9 @@ import Foundation
 
 protocol SuggestionPresenterProtocol {
     
+    var interactor: SuggestionInteractorProtocol? { get set }
+    weak var view: SuggestionViewProtocol? { get set }
+    
+    func fetchMovies()
+    func fetchedMovies(movies: Array<Movie>)
 }

@@ -13,5 +13,6 @@ enum CityName: String {
 }
 
 protocol SuggestionInteractorProtocol {
+    var presenter: SuggestionPresenterProtocol? { get set }
     func fetchMovies(from: Int, count: Int, at: CityName)
 }
