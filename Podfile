@@ -4,6 +4,8 @@ target 'VIPER-Douban' do
   pod 'Alamofire', '~> 4.3.0'
   pod 'ObjectMapper', '~> 2.2.2'
   pod 'RxSwift', '~> 3.1.0'
+  pod 'Swinject', '~> 2.0.0'
+  pod 'RxAlamofire'
   
   post_install do |installer|
       installer.pods_project.targets.each do |target|

@@ -3,22 +3,32 @@ PODS:
   - Nimble (5.1.1)
   - ObjectMapper (2.2.2)
   - Quick (1.0.0)
+  - RxAlamofire (3.0.2):
+    - RxAlamofire/Core (= 3.0.2)
+  - RxAlamofire/Core (3.0.2):
+    - Alamofire (~> 4.0)
+    - RxSwift (~> 3.0)
   - RxSwift (3.1.0)
+  - Swinject (2.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.3.0)
   - Nimble (~> 5.1.1)
   - ObjectMapper (~> 2.2.2)
   - Quick (~> 1.0.0)
+  - RxAlamofire
   - RxSwift (~> 3.1.0)
+  - Swinject (~> 2.0.0)
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
   ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
   Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
+  RxAlamofire: bc53604b29fd2d220cfaa490c736cc4500819f34
   RxSwift: 83ff553e7593fdfdcb2562933a64c0284dffdadc
+  Swinject: 2e964a80d70ab09b3949c99032711f89147bfd60
 
-PODFILE CHECKSUM: bb54cd07d7dce26a9f43bee8bc4f76327a568d76
+PODFILE CHECKSUM: 1c1747e3ea1fd937a99986c7336ab2259e8644bd
 
 COCOAPODS: 1.0.1
