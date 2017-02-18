@@ -9,18 +9,21 @@
 import Foundation
 import Alamofire
 import ObjectMapper
+import RxSwift
+import RxAlamofire
+
+enum MovieError: Error {
+    case parseError
+}
 
 struct SuggestionInteractor: SuggestionInteractorProtocol {
     
-    var presenter: SuggestionPresenterProtocol?
-    
-    func fetchMovies(from: Int, count: Int, at city: CityName) {
-        let parameters: Parameters = ["city": city.rawValue, "start": from, "count": count]
-        Alamofire.request("https://api.douban.com/v2/movie/in_theaters", method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON { response in
-            guard let movieResponse = Mapper<MovieResponse>().map(JSONObject: response.value) else {
-                return
+    func fetchMovies(from: Int, count: Int, at city: CityName) -> Observable<Array<Movie>> {
+        return AlamofireClient().send(InTheatreMovieRequest(from: from, count: count, at: city)).map { response -> Array<Movie> in
+            guard let resp = response else {
+                throw MovieError.parseError
             }
-            self.presenter?.fetchedMovies(movies: movieResponse.movies)
+            return resp.movies
         }
     }
 }

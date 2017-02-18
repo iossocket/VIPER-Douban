@@ -7,17 +7,15 @@
 //
 
 import Foundation
+import RxSwift
 
 class SuggestionPresenter: SuggestionPresenterProtocol {
     
-    weak var view: SuggestionViewProtocol?
     var interactor: SuggestionInteractorProtocol?
+    let disposeBag = DisposeBag()
     
-    func fetchMovies() {
-        interactor?.fetchMovies(from: 0, count: 5, at: .xian)
-    }
-    
-    func fetchedMovies(movies: Array<Movie>) {
-        view?.displayMovies(movies: movies)
+    func fetchMovies() -> Observable<Array<Movie>> {
+        interactor = SuggestionInteractor()
+        return interactor!.fetchMovies(from: 0, count: 5, at: .xian)
     }
 }

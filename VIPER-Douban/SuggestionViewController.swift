@@ -3,22 +3,19 @@
 //
 
 import UIKit
+import RxSwift
 
-class SuggestionViewController: UIViewController, SuggestionViewProtocol {
+class SuggestionViewController: UIViewController {
 
     var presenter: SuggestionPresenterProtocol?
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter = SuggestionPresenter()
-        self.presenter?.interactor = SuggestionInteractor(presenter: self.presenter)
-        self.presenter?.view = self
-        
-        self.presenter?.fetchMovies()
-    }
-    
-    func displayMovies(movies: Array<Movie>) {
-        print(movies)
+        self.presenter?.fetchMovies().subscribe(onNext: {
+            print($0)
+        }).addDisposableTo(disposeBag)
     }
 }
 

@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-struct MovieResponse: Mappable {
+struct MovieResponse: Mappable, Decodable {
     var movies: Array<Movie> = []
     
     init?(map: Map) {
@@ -17,6 +17,10 @@ struct MovieResponse: Mappable {
     
     mutating func mapping(map: Map) {
         movies <- map["subjects"]
+    }
+    
+    static func parse(data: Any) -> MovieResponse? {
+        return Mapper<MovieResponse>().map(JSONObject: data)
     }
 }
 

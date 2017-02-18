@@ -7,12 +7,12 @@
 //
 
 import Foundation
+import RxSwift
 
 enum CityName: String {
     case xian = "西安"
 }
 
 protocol SuggestionInteractorProtocol {
-    var presenter: SuggestionPresenterProtocol? { get set }
-    func fetchMovies(from: Int, count: Int, at: CityName)
+    func fetchMovies(from: Int, count: Int, at: CityName) -> Observable<Array<Movie>>
 }
