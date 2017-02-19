@@ -11,11 +11,11 @@ import RxSwift
 
 class SuggestionPresenter: SuggestionPresenterProtocol {
     
-    var interactor: SuggestionInteractorProtocol?
+    var interactor: InTheatreMovieInteractorProtocol?
     let disposeBag = DisposeBag()
     
     func fetchMovies() -> Observable<Array<Movie>> {
-        interactor = SuggestionInteractor()
+        interactor = InTheatreMovieInteractor()
         return interactor!.fetchMovies(from: 0, count: 5, at: .xian)
     }
 }

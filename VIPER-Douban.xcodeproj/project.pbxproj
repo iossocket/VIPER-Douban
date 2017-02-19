@@ -21,8 +21,8 @@
 		D09979921E53E47400635B45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D09979911E53E47400635B45 /* Assets.xcassets */; };
 		D09979951E53E47400635B45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D09979931E53E47400635B45 /* LaunchScreen.storyboard */; };
 		D09979A71E543EEC00635B45 /* VIPER_DoubanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09979A61E543EEC00635B45 /* VIPER_DoubanTests.swift */; };
-		D09979AF1E54427200635B45 /* SuggestionInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09979AE1E54427200635B45 /* SuggestionInteractorProtocol.swift */; };
-		D09979B11E544D3600635B45 /* SuggestionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09979B01E544D3600635B45 /* SuggestionInteractor.swift */; };
+		D09979AF1E54427200635B45 /* InTheatreMovieInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09979AE1E54427200635B45 /* InTheatreMovieInteractorProtocol.swift */; };
+		D09979B11E544D3600635B45 /* InTheatreMovieInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09979B01E544D3600635B45 /* InTheatreMovieInteractor.swift */; };
 		D09979B31E54505500635B45 /* SuggestionPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09979B21E54505500635B45 /* SuggestionPresenterProtocol.swift */; };
 		D09979B51E54507500635B45 /* SuggestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09979B41E54507500635B45 /* SuggestionPresenter.swift */; };
 /* End PBXBuildFile section */
@@ -59,8 +59,8 @@
 		D09979A41E543EEC00635B45 /* VIPER-DoubanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VIPER-DoubanTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09979A61E543EEC00635B45 /* VIPER_DoubanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPER_DoubanTests.swift; sourceTree = "<group>"; };
 		D09979A81E543EEC00635B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D09979AE1E54427200635B45 /* SuggestionInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionInteractorProtocol.swift; sourceTree = "<group>"; };
-		D09979B01E544D3600635B45 /* SuggestionInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionInteractor.swift; sourceTree = "<group>"; };
+		D09979AE1E54427200635B45 /* InTheatreMovieInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InTheatreMovieInteractorProtocol.swift; sourceTree = "<group>"; };
+		D09979B01E544D3600635B45 /* InTheatreMovieInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InTheatreMovieInteractor.swift; sourceTree = "<group>"; };
 		D09979B21E54505500635B45 /* SuggestionPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionPresenterProtocol.swift; sourceTree = "<group>"; };
 		D09979B41E54507500635B45 /* SuggestionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionPresenter.swift; sourceTree = "<group>"; };
 		F63CB8A8D6DFF171DA6C1312 /* Pods-VIPER-DoubanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-DoubanTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VIPER-DoubanTests/Pods-VIPER-DoubanTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -156,8 +156,8 @@
 		D08F1E431E56E78800390532 /* Iteractor */ = {
 			isa = PBXGroup;
 			children = (
-				D09979AE1E54427200635B45 /* SuggestionInteractorProtocol.swift */,
-				D09979B01E544D3600635B45 /* SuggestionInteractor.swift */,
+				D09979AE1E54427200635B45 /* InTheatreMovieInteractorProtocol.swift */,
+				D09979B01E544D3600635B45 /* InTheatreMovieInteractor.swift */,
 			);
 			name = Iteractor;
 			sourceTree = "<group>";
@@ -432,7 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D09979B11E544D3600635B45 /* SuggestionInteractor.swift in Sources */,
+				D09979B11E544D3600635B45 /* InTheatreMovieInteractor.swift in Sources */,
 				D099798D1E53E47400635B45 /* SuggestionViewController.swift in Sources */,
 				D099798B1E53E47400635B45 /* AppDelegate.swift in Sources */,
 				D08BF76A1E5882F7000AE159 /* Decodable.swift in Sources */,
@@ -440,7 +440,7 @@
 				D09979B31E54505500635B45 /* SuggestionPresenterProtocol.swift in Sources */,
 				D09979B51E54507500635B45 /* SuggestionPresenter.swift in Sources */,
 				D08BF76E1E5883D9000AE159 /* AlamofireClient.swift in Sources */,
-				D09979AF1E54427200635B45 /* SuggestionInteractorProtocol.swift in Sources */,
+				D09979AF1E54427200635B45 /* InTheatreMovieInteractorProtocol.swift in Sources */,
 				D08F1E341E558E9000390532 /* Movie.swift in Sources */,
 				D08BF7681E588276000AE159 /* Request.swift in Sources */,
 				D08BF7711E588ADF000AE159 /* InTheatreMovieRequest.swift in Sources */,

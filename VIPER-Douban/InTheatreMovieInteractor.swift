@@ -1,5 +1,5 @@
 //
-//  SuggestionInteractor.swift
+//  InTheaterMovieInteractor.swift
 //  VIPER-Douban
 //
 //  Created by XueliangZhu on 2/15/17.
@@ -16,7 +16,7 @@ enum MovieError: Error {
     case parseError
 }
 
-struct SuggestionInteractor: SuggestionInteractorProtocol {
+struct InTheatreMovieInteractor: InTheatreMovieInteractorProtocol {
     
     func fetchMovies(from: Int, count: Int, at city: CityName) -> Observable<Array<Movie>> {
         return AlamofireClient().send(InTheatreMovieRequest(from: from, count: count, at: city)).map { response -> Array<Movie> in
