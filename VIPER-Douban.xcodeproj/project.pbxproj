@@ -126,6 +126,7 @@
 		D08BF7651E588244000AE159 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				D08F1E431E56E78800390532 /* Iteractor */,
 				D06A77521E59351A00ED238E /* Model */,
 				D08BF7661E58824C000AE159 /* API */,
 			);
@@ -156,7 +157,6 @@
 		D08F1E301E55442800390532 /* Suggestion */ = {
 			isa = PBXGroup;
 			children = (
-				D08F1E431E56E78800390532 /* Iteractor */,
 				D08F1E421E56E77D00390532 /* Presenter */,
 				D08F1E411E56E76F00390532 /* View */,
 			);
