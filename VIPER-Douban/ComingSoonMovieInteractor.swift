@@ -9,8 +9,10 @@
 import RxSwift
 
 struct ComingSoonMovieInteractor: ComingSoonMovieInteractorProtocol {
+    let client = container.resolve(Client.self)
+    
     func fetchMovies(from: Int, count: Int, at city: CityName) -> Observable<Array<Movie>> {
-        return AlamofireClient().send(ComingSoonMovieRequest(from: from, count: count, at: city)).map { response -> Array<Movie> in
+        return client!.send(ComingSoonMovieRequest(from: from, count: count, at: city)).map { response -> Array<Movie> in
             guard let resp = response else {
                 throw MovieError.parseError
             }

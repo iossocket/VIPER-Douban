@@ -13,9 +13,10 @@ enum MovieError: Error {
 }
 
 struct InTheatreMovieInteractor: InTheatreMovieInteractorProtocol {
+    let client = container.resolve(Client.self)
     
     func fetchMovies(from: Int, count: Int, at city: CityName) -> Observable<Array<Movie>> {
-        return AlamofireClient().send(InTheatreMovieRequest(from: from, count: count, at: city)).map { response -> Array<Movie> in
+        return client!.send(InTheatreMovieRequest(from: from, count: count, at: city)).map { response -> Array<Movie> in
             guard let resp = response else {
                 throw MovieError.parseError
             }

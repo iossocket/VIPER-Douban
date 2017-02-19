@@ -10,13 +10,10 @@ import RxSwift
 
 class SuggestionPresenter: SuggestionPresenterProtocol {
     
-    var inTheatreInteractor: InTheatreMovieInteractorProtocol?
-    var comingSoonInteractor: ComingSoonMovieInteractorProtocol?
-    let disposeBag = DisposeBag()
+    let inTheatreInteractor = container.resolve(InTheatreMovieInteractorProtocol.self)
+    let comingSoonInteractor = container.resolve(ComingSoonMovieInteractorProtocol.self)
     
     func fetchMovies() -> Observable<(inTheatre: Array<Movie>, comingSoon: Array<Movie>)> {
-        inTheatreInteractor = InTheatreMovieInteractor()
-        comingSoonInteractor = ComingSoonMovieInteractor()
         let inTheatreObservable = inTheatreInteractor!.fetchMovies(from: 0, count: 5, at: .xian)
         let comingSoonObservable = comingSoonInteractor!.fetchMovies(from: 0, count: 5, at: .xian)
         

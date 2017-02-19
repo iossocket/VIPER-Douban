@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Swinject
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,3 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+let container = Container() { c in
+    c.register(SuggestionPresenterProtocol.self) { _ in SuggestionPresenter() }
+    c.register(InTheatreMovieInteractorProtocol.self) { _ in InTheatreMovieInteractor() }
+    c.register(ComingSoonMovieInteractorProtocol.self) { _ in ComingSoonMovieInteractor() }
+    c.register(Client.self) { _ in AlamofireClient()}
+}
