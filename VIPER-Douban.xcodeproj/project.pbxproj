@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2949DE589000B74004234BD7 /* Pods_VIPER_Douban.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 856A817414641CF71AC43A0F /* Pods_VIPER_Douban.framework */; };
 		83630AB3D75C90486B73B8B2 /* Pods_VIPER_DoubanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00EF110DC2D3780AE9C1CCA7 /* Pods_VIPER_DoubanTests.framework */; };
+		D06A774B1E59193A00ED238E /* ComingSoonMovieInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06A774A1E59193A00ED238E /* ComingSoonMovieInteractorProtocol.swift */; };
+		D06A774D1E59194E00ED238E /* ComingSoonMovieInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06A774C1E59194E00ED238E /* ComingSoonMovieInteractor.swift */; };
+		D06A774F1E591A8900ED238E /* ComingSoonMovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06A774E1E591A8900ED238E /* ComingSoonMovieRequest.swift */; };
 		D08BF7681E588276000AE159 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08BF7671E588276000AE159 /* Request.swift */; };
 		D08BF76A1E5882F7000AE159 /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08BF7691E5882F7000AE159 /* Decodable.swift */; };
 		D08BF76C1E588344000AE159 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08BF76B1E588344000AE159 /* Client.swift */; };
@@ -43,6 +46,9 @@
 		582C12E5D8CD629D75666390 /* Pods-VIPER-Douban.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-Douban.release.xcconfig"; path = "Pods/Target Support Files/Pods-VIPER-Douban/Pods-VIPER-Douban.release.xcconfig"; sourceTree = "<group>"; };
 		6B7E83D706BFD8BC50494D19 /* Pods-VIPER-Douban.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-Douban.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VIPER-Douban/Pods-VIPER-Douban.debug.xcconfig"; sourceTree = "<group>"; };
 		856A817414641CF71AC43A0F /* Pods_VIPER_Douban.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPER_Douban.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D06A774A1E59193A00ED238E /* ComingSoonMovieInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComingSoonMovieInteractorProtocol.swift; sourceTree = "<group>"; };
+		D06A774C1E59194E00ED238E /* ComingSoonMovieInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComingSoonMovieInteractor.swift; sourceTree = "<group>"; };
+		D06A774E1E591A8900ED238E /* ComingSoonMovieRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComingSoonMovieRequest.swift; sourceTree = "<group>"; };
 		D08BF7671E588276000AE159 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		D08BF7691E5882F7000AE159 /* Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decodable.swift; sourceTree = "<group>"; };
 		D08BF76B1E588344000AE159 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
@@ -97,6 +103,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D06A77511E59339900ED238E /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				D09979AE1E54427200635B45 /* InTheatreMovieInteractorProtocol.swift */,
+				D06A774A1E59193A00ED238E /* ComingSoonMovieInteractorProtocol.swift */,
+			);
+			name = protocol;
+			sourceTree = "<group>";
+		};
 		D08BF7651E588244000AE159 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				D08BF7701E588ADF000AE159 /* InTheatreMovieRequest.swift */,
+				D06A774E1E591A8900ED238E /* ComingSoonMovieRequest.swift */,
 			);
 			name = Request;
 			sourceTree = "<group>";
@@ -156,8 +172,9 @@
 		D08F1E431E56E78800390532 /* Iteractor */ = {
 			isa = PBXGroup;
 			children = (
-				D09979AE1E54427200635B45 /* InTheatreMovieInteractorProtocol.swift */,
+				D06A77511E59339900ED238E /* protocol */,
 				D09979B01E544D3600635B45 /* InTheatreMovieInteractor.swift */,
+				D06A774C1E59194E00ED238E /* ComingSoonMovieInteractor.swift */,
 			);
 			name = Iteractor;
 			sourceTree = "<group>";
@@ -435,13 +452,16 @@
 				D09979B11E544D3600635B45 /* InTheatreMovieInteractor.swift in Sources */,
 				D099798D1E53E47400635B45 /* SuggestionViewController.swift in Sources */,
 				D099798B1E53E47400635B45 /* AppDelegate.swift in Sources */,
+				D06A774B1E59193A00ED238E /* ComingSoonMovieInteractorProtocol.swift in Sources */,
 				D08BF76A1E5882F7000AE159 /* Decodable.swift in Sources */,
+				D06A774F1E591A8900ED238E /* ComingSoonMovieRequest.swift in Sources */,
 				D08BF76C1E588344000AE159 /* Client.swift in Sources */,
 				D09979B31E54505500635B45 /* SuggestionPresenterProtocol.swift in Sources */,
 				D09979B51E54507500635B45 /* SuggestionPresenter.swift in Sources */,
 				D08BF76E1E5883D9000AE159 /* AlamofireClient.swift in Sources */,
 				D09979AF1E54427200635B45 /* InTheatreMovieInteractorProtocol.swift in Sources */,
 				D08F1E341E558E9000390532 /* Movie.swift in Sources */,
+				D06A774D1E59194E00ED238E /* ComingSoonMovieInteractor.swift in Sources */,
 				D08BF7681E588276000AE159 /* Request.swift in Sources */,
 				D08BF7711E588ADF000AE159 /* InTheatreMovieRequest.swift in Sources */,
 			);

@@ -14,7 +14,9 @@ class SuggestionViewController: UIViewController {
         super.viewDidLoad()
         self.presenter = SuggestionPresenter()
         self.presenter?.fetchMovies().subscribe(onNext: {
-            print($0)
+            print($0.inTheatre)
+            print("======================>")
+            print($0.comingSoon)
         }).addDisposableTo(disposeBag)
     }
 }
