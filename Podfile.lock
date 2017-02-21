@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (4.3.0)
+  - IGListKit (2.0.0)
+  - Kingfisher (3.3.1)
   - Nimble (5.1.1)
   - ObjectMapper (2.2.2)
   - Quick (1.0.0)
@@ -13,6 +15,8 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.3.0)
+  - IGListKit (~> 2.0.0)
+  - Kingfisher (~> 3.3.1)
   - Nimble (~> 5.1.1)
   - ObjectMapper (~> 2.2.2)
   - Quick (~> 1.0.0)
@@ -22,6 +26,8 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  IGListKit: ee255e4e61865bc3e01ca96b690c5435c2887849
+  Kingfisher: 4d943445768c60fe5de314619a8ab07ec761ae5b
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
   ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
   Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
@@ -29,6 +35,6 @@ SPEC CHECKSUMS:
   RxSwift: 83ff553e7593fdfdcb2562933a64c0284dffdadc
   Swinject: 2e964a80d70ab09b3949c99032711f89147bfd60
 
-PODFILE CHECKSUM: 1c1747e3ea1fd937a99986c7336ab2259e8644bd
+PODFILE CHECKSUM: f38c7a92de2d5d768b29c12e2658d3091aa0f7ea
 
 COCOAPODS: 1.0.1
