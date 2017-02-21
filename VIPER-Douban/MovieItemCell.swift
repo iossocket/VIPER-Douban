@@ -1,5 +1,5 @@
 //
-//  CenterLabelCell.swift
+//  MovieItemCell.swift
 //  VIPER-Douban
 //
 //  Created by XueliangZhu on 2/20/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CenterLabelCell: UICollectionViewCell {
+class MovieItemCell: UICollectionViewCell {
     lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit

@@ -29,13 +29,12 @@ class EmbeddedSectionController: IGListSectionController, IGListSectionType {
     }
     
     func cellForItem(at index: Int) -> UICollectionViewCell {
-        let cell = collectionContext!.dequeueReusableCell(of: CenterLabelCell.self, for: self, at: index) as! CenterLabelCell
+        let cell = collectionContext!.dequeueReusableCell(of: MovieItemCell.self, for: self, at: index) as! MovieItemCell
         var url = ""
         if let movie = data {
             url = movie.imageUrl
         }
         cell.imageView.kf.setImage(with: URL(string: url))
-        cell.backgroundColor = UIColor(red: 237/255.0, green: 73/255.0, blue: 86/255.0, alpha: 1)
         return cell
     }
     
