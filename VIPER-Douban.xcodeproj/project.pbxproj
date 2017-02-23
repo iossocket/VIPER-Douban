@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2949DE589000B74004234BD7 /* Pods_VIPER_Douban.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 856A817414641CF71AC43A0F /* Pods_VIPER_Douban.framework */; };
 		83630AB3D75C90486B73B8B2 /* Pods_VIPER_DoubanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00EF110DC2D3780AE9C1CCA7 /* Pods_VIPER_DoubanTests.framework */; };
+		D05687221E5E5C82004CF504 /* TypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05687211E5E5C82004CF504 /* TypeCell.swift */; };
+		D05687241E5E5ED5004CF504 /* TypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D05687231E5E5ED5004CF504 /* TypeCell.xib */; };
 		D0636D5C1E5AEBB10034E7B0 /* HorizontalSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0636D5B1E5AEBB10034E7B0 /* HorizontalSectionController.swift */; };
 		D0636D5E1E5AED1D0034E7B0 /* EmbeddedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0636D5D1E5AED1D0034E7B0 /* EmbeddedCollectionViewCell.swift */; };
 		D0636D601E5AEDD70034E7B0 /* EmbeddedSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0636D5F1E5AEDD70034E7B0 /* EmbeddedSectionController.swift */; };
@@ -53,6 +55,8 @@
 		582C12E5D8CD629D75666390 /* Pods-VIPER-Douban.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-Douban.release.xcconfig"; path = "Pods/Target Support Files/Pods-VIPER-Douban/Pods-VIPER-Douban.release.xcconfig"; sourceTree = "<group>"; };
 		6B7E83D706BFD8BC50494D19 /* Pods-VIPER-Douban.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-Douban.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VIPER-Douban/Pods-VIPER-Douban.debug.xcconfig"; sourceTree = "<group>"; };
 		856A817414641CF71AC43A0F /* Pods_VIPER_Douban.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPER_Douban.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D05687211E5E5C82004CF504 /* TypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeCell.swift; sourceTree = "<group>"; };
+		D05687231E5E5ED5004CF504 /* TypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TypeCell.xib; sourceTree = "<group>"; };
 		D0636D5B1E5AEBB10034E7B0 /* HorizontalSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalSectionController.swift; sourceTree = "<group>"; };
 		D0636D5D1E5AED1D0034E7B0 /* EmbeddedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmbeddedCollectionViewCell.swift; sourceTree = "<group>"; };
 		D0636D5F1E5AEDD70034E7B0 /* EmbeddedSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmbeddedSectionController.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 			children = (
 				D0636D5D1E5AED1D0034E7B0 /* EmbeddedCollectionViewCell.swift */,
 				D0636D611E5AEED10034E7B0 /* MovieItemCell.swift */,
+				D05687211E5E5C82004CF504 /* TypeCell.swift */,
+				D05687231E5E5ED5004CF504 /* TypeCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -392,6 +398,7 @@
 				D09979951E53E47400635B45 /* LaunchScreen.storyboard in Resources */,
 				D09979921E53E47400635B45 /* Assets.xcassets in Resources */,
 				D09979901E53E47400635B45 /* Main.storyboard in Resources */,
+				D05687241E5E5ED5004CF504 /* TypeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +519,7 @@
 				D08BF76A1E5882F7000AE159 /* Decodable.swift in Sources */,
 				D06A774F1E591A8900ED238E /* ComingSoonMovieRequest.swift in Sources */,
 				D08BF76C1E588344000AE159 /* Client.swift in Sources */,
+				D05687221E5E5C82004CF504 /* TypeCell.swift in Sources */,
 				D09979B31E54505500635B45 /* SuggestionPresenterProtocol.swift in Sources */,
 				D09979B51E54507500635B45 /* SuggestionPresenter.swift in Sources */,
 				D08BF76E1E5883D9000AE159 /* AlamofireClient.swift in Sources */,

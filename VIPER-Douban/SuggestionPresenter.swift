@@ -16,18 +16,20 @@ class SuggestionPresenter: SuggestionPresenterProtocol {
     
     func fetchMovies() -> Observable<InTheatreAndComingSoonMovies> {
         let inTheatreObservable = inTheatreInteractor!.fetchMovies(from: 0, count: 5, at: .xian).map { movies -> Array<DisplayMovie> in
-            return movies.map({ movie -> DisplayMovie in
-                DisplayMovie(id: movie.id, imageUrl: movie.images.large)
-            })
+            return self.mapMovieToDisplayMovie(movies: movies)
         }
         let comingSoonObservable = comingSoonInteractor!.fetchMovies(from: 0, count: 5, at: .xian).map { movies -> Array<DisplayMovie> in
-            return movies.map({ movie -> DisplayMovie in
-                DisplayMovie(id: movie.id, imageUrl: movie.images.large)
-            })
+            return self.mapMovieToDisplayMovie(movies: movies)
         }
         
         return Observable.combineLatest(inTheatreObservable, comingSoonObservable) { (inTheatre, comingSoon) -> InTheatreAndComingSoonMovies in
             InTheatreAndComingSoonMovies(inTheatre: inTheatre, comingSoon: comingSoon)
         }
+    }
+    
+    private func mapMovieToDisplayMovie(movies: Array<Movie>) -> Array<DisplayMovie> {
+        return movies.map({ movie -> DisplayMovie in
+            DisplayMovie(id: movie.id, imageUrl: movie.images.large)
+        })
     }
 }

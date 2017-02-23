@@ -29,14 +29,21 @@ class HorizontalSectionController: IGListSectionController {
 
 extension HorizontalSectionController: IGListSectionType {
     func numberOfItems() -> Int {
-        return 1
+        return 2
     }
     
     func sizeForItem(at index: Int) -> CGSize {
+        if index == 0 {
+            return CGSize(width: collectionContext!.containerSize.width, height: 50)
+        }
         return CGSize(width: collectionContext!.containerSize.width, height: 150)
     }
     
     func cellForItem(at index: Int) -> UICollectionViewCell {
+        if index == 0 {
+            let cell = collectionContext!.dequeueReusableCell(withNibName: "TypeCell", bundle: nil, for: self, at: 0) as! TypeCell
+            return cell
+        }
         let cell = collectionContext!.dequeueReusableCell(of: EmbeddedCollectionViewCell.self, for: self, at: index) as! EmbeddedCollectionViewCell
         adapter.collectionView = cell.collectionView
         return cell
