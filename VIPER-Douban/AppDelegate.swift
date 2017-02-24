@@ -14,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
         return true
     }
 }
@@ -24,4 +23,5 @@ let container = Container() { c in
     c.register(InTheatreMovieInteractorProtocol.self) { _ in InTheatreMovieInteractor() }
     c.register(ComingSoonMovieInteractorProtocol.self) { _ in ComingSoonMovieInteractor() }
     c.register(Client.self) { _ in AlamofireClient()}
+    c.register(HorizontalSectionPresenterProtocol.self) { _ in HorizontalSectionPresenter(currentType: .inTheatre)}
 }

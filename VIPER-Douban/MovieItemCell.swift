@@ -11,7 +11,9 @@ import UIKit
 class MovieItemCell: UICollectionViewCell {
     lazy var imageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.backgroundColor = UIColor.black
         imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
         self.contentView.addSubview(imageView)
         return imageView
     }()

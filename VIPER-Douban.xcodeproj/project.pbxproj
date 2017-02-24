@@ -11,6 +11,8 @@
 		83630AB3D75C90486B73B8B2 /* Pods_VIPER_DoubanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00EF110DC2D3780AE9C1CCA7 /* Pods_VIPER_DoubanTests.framework */; };
 		D05687221E5E5C82004CF504 /* TypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05687211E5E5C82004CF504 /* TypeCell.swift */; };
 		D05687241E5E5ED5004CF504 /* TypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D05687231E5E5ED5004CF504 /* TypeCell.xib */; };
+		D05687261E5FA9CE004CF504 /* HorizontalSectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05687251E5FA9CE004CF504 /* HorizontalSectionPresenter.swift */; };
+		D05687281E5FA9E9004CF504 /* HorizontalSectionPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05687271E5FA9E9004CF504 /* HorizontalSectionPresenterProtocol.swift */; };
 		D0636D5C1E5AEBB10034E7B0 /* HorizontalSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0636D5B1E5AEBB10034E7B0 /* HorizontalSectionController.swift */; };
 		D0636D5E1E5AED1D0034E7B0 /* EmbeddedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0636D5D1E5AED1D0034E7B0 /* EmbeddedCollectionViewCell.swift */; };
 		D0636D601E5AEDD70034E7B0 /* EmbeddedSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0636D5F1E5AEDD70034E7B0 /* EmbeddedSectionController.swift */; };
@@ -57,6 +59,8 @@
 		856A817414641CF71AC43A0F /* Pods_VIPER_Douban.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPER_Douban.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D05687211E5E5C82004CF504 /* TypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeCell.swift; sourceTree = "<group>"; };
 		D05687231E5E5ED5004CF504 /* TypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TypeCell.xib; sourceTree = "<group>"; };
+		D05687251E5FA9CE004CF504 /* HorizontalSectionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalSectionPresenter.swift; sourceTree = "<group>"; };
+		D05687271E5FA9E9004CF504 /* HorizontalSectionPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalSectionPresenterProtocol.swift; sourceTree = "<group>"; };
 		D0636D5B1E5AEBB10034E7B0 /* HorizontalSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalSectionController.swift; sourceTree = "<group>"; };
 		D0636D5D1E5AED1D0034E7B0 /* EmbeddedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmbeddedCollectionViewCell.swift; sourceTree = "<group>"; };
 		D0636D5F1E5AEDD70034E7B0 /* EmbeddedSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmbeddedSectionController.swift; sourceTree = "<group>"; };
@@ -224,6 +228,8 @@
 			children = (
 				D09979B21E54505500635B45 /* SuggestionPresenterProtocol.swift */,
 				D09979B41E54507500635B45 /* SuggestionPresenter.swift */,
+				D05687251E5FA9CE004CF504 /* HorizontalSectionPresenter.swift */,
+				D05687271E5FA9E9004CF504 /* HorizontalSectionPresenterProtocol.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -521,6 +527,7 @@
 				D08BF76C1E588344000AE159 /* Client.swift in Sources */,
 				D05687221E5E5C82004CF504 /* TypeCell.swift in Sources */,
 				D09979B31E54505500635B45 /* SuggestionPresenterProtocol.swift in Sources */,
+				D05687281E5FA9E9004CF504 /* HorizontalSectionPresenterProtocol.swift in Sources */,
 				D09979B51E54507500635B45 /* SuggestionPresenter.swift in Sources */,
 				D08BF76E1E5883D9000AE159 /* AlamofireClient.swift in Sources */,
 				D0636D601E5AEDD70034E7B0 /* EmbeddedSectionController.swift in Sources */,
@@ -529,6 +536,7 @@
 				D08F1E341E558E9000390532 /* Movie.swift in Sources */,
 				D0636D7F1E5BEA740034E7B0 /* InTheatreAndComingSoonMovies.swift in Sources */,
 				D06A774D1E59194E00ED238E /* ComingSoonMovieInteractor.swift in Sources */,
+				D05687261E5FA9CE004CF504 /* HorizontalSectionPresenter.swift in Sources */,
 				D0636D621E5AEED10034E7B0 /* MovieItemCell.swift in Sources */,
 				D08BF7681E588276000AE159 /* Request.swift in Sources */,
 				D08BF7711E588ADF000AE159 /* InTheatreMovieRequest.swift in Sources */,

@@ -11,7 +11,7 @@ import IGListKit
 
 class HorizontalSectionController: IGListSectionController {
     
-    fileprivate var data: InTheatreAndComingSoonMovies?
+    fileprivate var presenter = container.resolve(HorizontalSectionPresenterProtocol.self)!
     
     override init() {
         super.init()
@@ -40,26 +40,37 @@ extension HorizontalSectionController: IGListSectionType {
     }
     
     func cellForItem(at index: Int) -> UICollectionViewCell {
-        if index == 0 {
-            let cell = collectionContext!.dequeueReusableCell(withNibName: "TypeCell", bundle: nil, for: self, at: 0) as! TypeCell
+        if index == 1 {
+            let cell = collectionContext!.dequeueReusableCell(of: EmbeddedCollectionViewCell.self, for: self, at: index) as! EmbeddedCollectionViewCell
+            adapter.collectionView = cell.collectionView
             return cell
         }
-        let cell = collectionContext!.dequeueReusableCell(of: EmbeddedCollectionViewCell.self, for: self, at: index) as! EmbeddedCollectionViewCell
-        adapter.collectionView = cell.collectionView
+        let cell = collectionContext!.dequeueReusableCell(withNibName: "TypeCell", bundle: nil, for: self, at: 0) as! TypeCell
+        cell.handleTapped = {[weak self] type in
+            self?.currentTypeChanged(type: type)
+        }
         return cell
     }
     
     func didUpdate(to object: Any) {
-        data = object as? InTheatreAndComingSoonMovies
+        presenter.configInTheatreAndComingSoonMovies(movies: object as? InTheatreAndComingSoonMovies)
     }
     
     func didSelectItem(at index: Int) {}
+    
+    private func currentTypeChanged(type: MovieType) {
+        if presenter.shouldChangeCurrent(type: type) {
+            adapter.performUpdates(animated: true)
+            guard let cell = collectionContext?.cellForItem(at: 0, sectionController: self) as? TypeCell else { return }
+            cell.changeUnderLinePositionby(movieType: type)
+        }
+    }
 }
 
 extension HorizontalSectionController: IGListAdapterDataSource {
     func objects(for listAdapter: IGListAdapter) -> [IGListDiffable] {
-        guard let data = data else { return [] }
-        return data.inTheatre
+        guard let data = presenter.currentMovies as? Array<DisplayMovie> else { return [] }
+        return data
     }
     
     func listAdapter(_ listAdapter: IGListAdapter, sectionControllerFor object: Any) -> IGListSectionController {
