@@ -39,6 +39,20 @@ class SuggestionViewController: UIViewController {
         collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor).isActive = true
+        
+        collectionView.contentInset = UIEdgeInsets(top: 200, left: 0, bottom: 0, right: 0)
+        let header = Bundle.main.loadNibNamed("HeaderView", owner: nil, options: nil)?.first as! HeaderView
+        header.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.addSubview(header)
+        
+        let headerAnchor = header.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor)
+        headerAnchor.priority = 999
+        headerAnchor.isActive = true
+        header.leadingAnchor.constraint(equalTo: collectionView.leadingAnchor).isActive = true
+        header.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        header.bottomAnchor.constraint(equalTo: collectionView.topAnchor).isActive = true
+        header.heightAnchor.constraint(greaterThanOrEqualToConstant: 50).isActive = true
+        header.config(images: ["1", "2", "3"])
     }
     
     private func fetchMovie() {
