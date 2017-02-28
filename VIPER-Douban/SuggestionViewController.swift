@@ -35,7 +35,7 @@ class SuggestionViewController: UIViewController {
     private func configUI() {
         automaticallyAdjustsScrollViewInsets = false
         view.addSubview(collectionView)
-        collectionView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
+        collectionView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor).isActive = true
@@ -45,7 +45,7 @@ class SuggestionViewController: UIViewController {
         header.translatesAutoresizingMaskIntoConstraints = false
         collectionView.addSubview(header)
         
-        let headerAnchor = header.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor)
+        let headerAnchor = header.topAnchor.constraint(equalTo: view.topAnchor)
         headerAnchor.priority = 999
         headerAnchor.isActive = true
         header.leadingAnchor.constraint(equalTo: collectionView.leadingAnchor).isActive = true
@@ -53,6 +53,9 @@ class SuggestionViewController: UIViewController {
         header.bottomAnchor.constraint(equalTo: collectionView.topAnchor).isActive = true
         header.heightAnchor.constraint(greaterThanOrEqualToConstant: 50).isActive = true
         header.config(images: ["1", "2", "3"])
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
     }
     
     private func fetchMovie() {
