@@ -44,6 +44,8 @@
 		D0F1AB031E6557D800069465 /* ActivitySectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F1AB021E6557D800069465 /* ActivitySectionController.swift */; };
 		D0F1AB061E65587F00069465 /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F1AB041E65587F00069465 /* ActivityCell.swift */; };
 		D0F1AB071E65587F00069465 /* ActivityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F1AB051E65587F00069465 /* ActivityCell.xib */; };
+		D0F1AB141E6662FB00069465 /* SearchHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F1AB131E6662FB00069465 /* SearchHeaderView.swift */; };
+		D0F1AB161E66630600069465 /* SearchHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F1AB151E66630600069465 /* SearchHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,8 @@
 		D0F1AB021E6557D800069465 /* ActivitySectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitySectionController.swift; sourceTree = "<group>"; };
 		D0F1AB041E65587F00069465 /* ActivityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
 		D0F1AB051E65587F00069465 /* ActivityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityCell.xib; sourceTree = "<group>"; };
+		D0F1AB131E6662FB00069465 /* SearchHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchHeaderView.swift; sourceTree = "<group>"; };
+		D0F1AB151E66630600069465 /* SearchHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchHeaderView.xib; sourceTree = "<group>"; };
 		F63CB8A8D6DFF171DA6C1312 /* Pods-VIPER-DoubanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-DoubanTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VIPER-DoubanTests/Pods-VIPER-DoubanTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,6 +150,8 @@
 				D05687231E5E5ED5004CF504 /* TypeCell.xib */,
 				D0F1AB041E65587F00069465 /* ActivityCell.swift */,
 				D0F1AB051E65587F00069465 /* ActivityCell.xib */,
+				D0F1AB131E6662FB00069465 /* SearchHeaderView.swift */,
+				D0F1AB151E66630600069465 /* SearchHeaderView.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -421,6 +427,7 @@
 				D09979921E53E47400635B45 /* Assets.xcassets in Resources */,
 				D09979901E53E47400635B45 /* Main.storyboard in Resources */,
 				D0F1AB071E65587F00069465 /* ActivityCell.xib in Resources */,
+				D0F1AB161E66630600069465 /* SearchHeaderView.xib in Resources */,
 				D05687241E5E5ED5004CF504 /* TypeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,6 +556,7 @@
 				D09979B51E54507500635B45 /* SuggestionPresenter.swift in Sources */,
 				D08BF76E1E5883D9000AE159 /* AlamofireClient.swift in Sources */,
 				D0636D601E5AEDD70034E7B0 /* EmbeddedSectionController.swift in Sources */,
+				D0F1AB141E6662FB00069465 /* SearchHeaderView.swift in Sources */,
 				D0636D5E1E5AED1D0034E7B0 /* EmbeddedCollectionViewCell.swift in Sources */,
 				D0F1AB061E65587F00069465 /* ActivityCell.swift in Sources */,
 				D09979AF1E54427200635B45 /* InTheatreMovieInteractorProtocol.swift in Sources */,

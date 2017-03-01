@@ -29,7 +29,7 @@ class SuggestionViewController: UIViewController {
         configUI()
         adaptor.collectionView = collectionView
         adaptor.dataSource = self
-        fetchMovie()
+//        fetchMovie()
     }
     
     private func configUI() {
@@ -56,6 +56,14 @@ class SuggestionViewController: UIViewController {
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isHidden = true
+        
+        let search = SearchHeaderView.loadViewFromNib()
+        view.addSubview(search)
+        search.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        search.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        search.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        search.heightAnchor.constraint(equalToConstant: 64).isActive = true
     }
     
     private func fetchMovie() {
