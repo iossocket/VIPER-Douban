@@ -41,6 +41,9 @@
 		D09979B51E54507500635B45 /* SuggestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09979B41E54507500635B45 /* SuggestionPresenter.swift */; };
 		D0F1AA8B1E63ABEB00069465 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F1AA8A1E63ABEB00069465 /* HeaderView.swift */; };
 		D0F1AA8D1E63ABF500069465 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F1AA8C1E63ABF500069465 /* HeaderView.xib */; };
+		D0F1AB031E6557D800069465 /* ActivitySectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F1AB021E6557D800069465 /* ActivitySectionController.swift */; };
+		D0F1AB061E65587F00069465 /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F1AB041E65587F00069465 /* ActivityCell.swift */; };
+		D0F1AB071E65587F00069465 /* ActivityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F1AB051E65587F00069465 /* ActivityCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +98,9 @@
 		D09979B41E54507500635B45 /* SuggestionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionPresenter.swift; sourceTree = "<group>"; };
 		D0F1AA8A1E63ABEB00069465 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		D0F1AA8C1E63ABF500069465 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		D0F1AB021E6557D800069465 /* ActivitySectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitySectionController.swift; sourceTree = "<group>"; };
+		D0F1AB041E65587F00069465 /* ActivityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
+		D0F1AB051E65587F00069465 /* ActivityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityCell.xib; sourceTree = "<group>"; };
 		F63CB8A8D6DFF171DA6C1312 /* Pods-VIPER-DoubanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-DoubanTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VIPER-DoubanTests/Pods-VIPER-DoubanTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +144,8 @@
 				D0F1AA8A1E63ABEB00069465 /* HeaderView.swift */,
 				D0F1AA8C1E63ABF500069465 /* HeaderView.xib */,
 				D05687231E5E5ED5004CF504 /* TypeCell.xib */,
+				D0F1AB041E65587F00069465 /* ActivityCell.swift */,
+				D0F1AB051E65587F00069465 /* ActivityCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -147,6 +155,7 @@
 			children = (
 				D0636D5B1E5AEBB10034E7B0 /* HorizontalSectionController.swift */,
 				D0636D5F1E5AEDD70034E7B0 /* EmbeddedSectionController.swift */,
+				D0F1AB021E6557D800069465 /* ActivitySectionController.swift */,
 			);
 			name = SectionController;
 			sourceTree = "<group>";
@@ -411,6 +420,7 @@
 				D0F1AA8D1E63ABF500069465 /* HeaderView.xib in Resources */,
 				D09979921E53E47400635B45 /* Assets.xcassets in Resources */,
 				D09979901E53E47400635B45 /* Main.storyboard in Resources */,
+				D0F1AB071E65587F00069465 /* ActivityCell.xib in Resources */,
 				D05687241E5E5ED5004CF504 /* TypeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,6 +539,7 @@
 				D06A774B1E59193A00ED238E /* ComingSoonMovieInteractorProtocol.swift in Sources */,
 				D0636D7D1E5BEA460034E7B0 /* DisplayMovie.swift in Sources */,
 				D0636D5C1E5AEBB10034E7B0 /* HorizontalSectionController.swift in Sources */,
+				D0F1AB031E6557D800069465 /* ActivitySectionController.swift in Sources */,
 				D08BF76A1E5882F7000AE159 /* Decodable.swift in Sources */,
 				D06A774F1E591A8900ED238E /* ComingSoonMovieRequest.swift in Sources */,
 				D08BF76C1E588344000AE159 /* Client.swift in Sources */,
@@ -539,6 +550,7 @@
 				D08BF76E1E5883D9000AE159 /* AlamofireClient.swift in Sources */,
 				D0636D601E5AEDD70034E7B0 /* EmbeddedSectionController.swift in Sources */,
 				D0636D5E1E5AED1D0034E7B0 /* EmbeddedCollectionViewCell.swift in Sources */,
+				D0F1AB061E65587F00069465 /* ActivityCell.swift in Sources */,
 				D09979AF1E54427200635B45 /* InTheatreMovieInteractorProtocol.swift in Sources */,
 				D08F1E341E558E9000390532 /* Movie.swift in Sources */,
 				D0636D7F1E5BEA740034E7B0 /* InTheatreAndComingSoonMovies.swift in Sources */,

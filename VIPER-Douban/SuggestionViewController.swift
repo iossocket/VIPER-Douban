@@ -68,6 +68,7 @@ class SuggestionViewController: UIViewController {
 
 extension SuggestionViewController: IGListAdapterDataSource {
     func objects(for listAdapter: IGListAdapter) -> [IGListDiffable] {
+        data.insert("activity", at: 0)
         guard let data = data as? [IGListDiffable] else {
             return []
         }
@@ -78,7 +79,7 @@ extension SuggestionViewController: IGListAdapterDataSource {
         if object is InTheatreAndComingSoonMovies {
             return HorizontalSectionController()
         }
-        return IGListSectionController()
+        return ActivitySectionController()
     }
     
     func emptyView(for listAdapter: IGListAdapter) -> UIView? {
