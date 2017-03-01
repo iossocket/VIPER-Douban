@@ -29,7 +29,9 @@ class SuggestionPresenter: SuggestionPresenterProtocol {
     
     private func mapMovieToDisplayMovie(movies: Array<Movie>) -> Array<DisplayMovie> {
         return movies.map({ movie -> DisplayMovie in
-            DisplayMovie(id: movie.id, imageUrl: movie.images.large)
+            let rating = movie.rating
+            let star = rating.average * 5 / Float(rating.max - rating.min)
+            return DisplayMovie(id: movie.id, imageUrl: movie.images.large, title: movie.title, star: star)
         })
     }
 }

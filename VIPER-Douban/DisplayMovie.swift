@@ -11,9 +11,13 @@ import IGListKit
 class DisplayMovie: NSObject, IGListDiffable {
     var id: String
     var imageUrl: String
-    init(id: String, imageUrl: String) {
+    var title: String
+    var star: Float
+    init(id: String, imageUrl: String, title: String, star: Float) {
         self.id = id
         self.imageUrl = imageUrl
+        self.title = title
+        self.star = star
         super.init()
     }
     

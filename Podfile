@@ -8,6 +8,7 @@ target 'VIPER-Douban' do
   pod 'RxAlamofire'
   pod 'IGListKit', '~> 2.0.0'
   pod 'Kingfisher', '~> 3.3.1'
+  pod 'Cosmos', '~> 8.0'
   
   post_install do |installer|
       installer.pods_project.targets.each do |target|

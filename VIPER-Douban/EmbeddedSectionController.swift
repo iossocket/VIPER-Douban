@@ -25,16 +25,17 @@ class EmbeddedSectionController: IGListSectionController, IGListSectionType {
     
     func sizeForItem(at index: Int) -> CGSize {
         let height = collectionContext?.containerSize.height ?? 0
-        return CGSize(width: 100, height: height)
+        return CGSize(width: 110, height: height)
     }
     
     func cellForItem(at index: Int) -> UICollectionViewCell {
         let cell = collectionContext!.dequeueReusableCell(of: MovieItemCell.self, for: self, at: index) as! MovieItemCell
-        var url = ""
-        if let movie = data {
-            url = movie.imageUrl
+        guard let movie = data else {
+            return cell
         }
-        cell.imageView.kf.setImage(with: URL(string: url))
+        cell.imageView.kf.setImage(with: URL(string: movie.imageUrl))
+        cell.titleLabel.text = movie.title
+        cell.configStars(star: movie.star)
         return cell
     }
     

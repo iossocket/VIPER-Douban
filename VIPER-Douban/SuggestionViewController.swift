@@ -29,7 +29,7 @@ class SuggestionViewController: UIViewController {
         configUI()
         adaptor.collectionView = collectionView
         adaptor.dataSource = self
-//        fetchMovie()
+        fetchMovie()
     }
     
     private func configUI() {

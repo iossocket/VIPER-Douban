@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.3.0)
+  - Cosmos (8.0.1)
   - IGListKit (2.0.0)
   - Kingfisher (3.3.1)
   - Nimble (5.1.1)
@@ -15,6 +16,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.3.0)
+  - Cosmos (~> 8.0)
   - IGListKit (~> 2.0.0)
   - Kingfisher (~> 3.3.1)
   - Nimble (~> 5.1.1)
@@ -26,6 +28,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  Cosmos: 7e4615ae6a3af8109e242b34cfddfaba1c25bfbe
   IGListKit: ee255e4e61865bc3e01ca96b690c5435c2887849
   Kingfisher: 4d943445768c60fe5de314619a8ab07ec761ae5b
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
@@ -35,6 +38,6 @@ SPEC CHECKSUMS:
   RxSwift: 83ff553e7593fdfdcb2562933a64c0284dffdadc
   Swinject: 2e964a80d70ab09b3949c99032711f89147bfd60
 
-PODFILE CHECKSUM: f38c7a92de2d5d768b29c12e2658d3091aa0f7ea
+PODFILE CHECKSUM: b5fb969ecb5b10cf5915971996da0499cfaa6126
 
 COCOAPODS: 1.0.1
