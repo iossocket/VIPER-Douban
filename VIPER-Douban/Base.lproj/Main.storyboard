@@ -39,17 +39,19 @@
                     </tabBar>
                     <connections>
                         <segue destination="IV0-BK-y5v" kind="relationship" relationship="viewControllers" id="QEh-oW-Fkn"/>
+                        <segue destination="Xab-QX-pVD" kind="relationship" relationship="viewControllers" id="fkh-QD-E9X"/>
+                        <segue destination="2qd-nv-KiM" kind="relationship" relationship="viewControllers" id="e13-Rp-qo7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mt8-jv-pa3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="128.18590704647679"/>
+            <point key="canvasLocation" x="113" y="860"/>
         </scene>
-        <!--Item-->
+        <!--推荐-->
         <scene sceneID="XFe-nC-yQg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IV0-BK-y5v" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="6WM-dx-6yO"/>
+                    <tabBarItem key="tabBarItem" title="推荐" image="suggestion" id="6WM-dx-6yO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vW2-xk-ifu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -64,5 +66,48 @@
             </objects>
             <point key="canvasLocation" x="1079.2" y="128.18590704647679"/>
         </scene>
+        <!--电影-->
+        <scene sceneID="TfD-4h-5E0">
+            <objects>
+                <viewController id="Xab-QX-pVD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2VV-AA-oAW"/>
+                        <viewControllerLayoutGuide type="bottom" id="F4k-Hr-Ymw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ffW-DO-67i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="电影" image="film" id="7Pe-on-I1B"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bgc-RV-U4t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079" y="860"/>
+        </scene>
+        <!--我-->
+        <scene sceneID="j9k-k5-n21">
+            <objects>
+                <viewController id="2qd-nv-KiM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dnp-WH-Aek"/>
+                        <viewControllerLayoutGuide type="bottom" id="iWK-OL-SIS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OSi-6K-xqd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="我" image="me" id="Z1X-DG-Adk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yQD-gb-XP3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1078" y="1602"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="film" width="25" height="25"/>
+        <image name="me" width="25" height="25"/>
+        <image name="suggestion" width="25" height="27"/>
+    </resources>
 </document>

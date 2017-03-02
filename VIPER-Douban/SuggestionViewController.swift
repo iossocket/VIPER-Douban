@@ -34,6 +34,7 @@ class SuggestionViewController: UIViewController {
     
     private func configUI() {
         automaticallyAdjustsScrollViewInsets = false
+        collectionView.showsVerticalScrollIndicator = false
         view.addSubview(collectionView)
         collectionView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
