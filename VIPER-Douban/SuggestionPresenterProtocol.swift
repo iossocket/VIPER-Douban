@@ -10,5 +10,5 @@ import Foundation
 import RxSwift
 
 protocol SuggestionPresenterProtocol {
-    func fetchMovies() -> Observable<InTheatreAndComingSoonMovies>
+    func fetchMovies() -> Observable<(InTheatreAndComingSoonMovies, Top250Movies)>
 }

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="CommonHeaderView" customModule="VIPER_Douban" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CaJ-iv-rpG">
+                    <rect key="frame" x="0.0" y="15" width="4" height="20"/>
+                    <color key="backgroundColor" red="1" green="0.30196078430000001" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Cna-1U-2gz"/>
+                        <constraint firstAttribute="width" constant="4" id="abd-N9-YNQ"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top 250" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qf9-Is-jsu">
+                    <rect key="frame" x="16" y="16" width="57" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Qf9-Is-jsu" firstAttribute="leading" secondItem="CaJ-iv-rpG" secondAttribute="trailing" constant="12" id="9IW-ch-JS8"/>
+                <constraint firstItem="CaJ-iv-rpG" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="Mgo-tR-VZ9"/>
+                <constraint firstItem="Qf9-Is-jsu" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="eUQ-F0-yIb"/>
+                <constraint firstItem="CaJ-iv-rpG" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="xzZ-sh-6Ci"/>
+            </constraints>
+        </collectionReusableView>
+    </objects>
+</document>

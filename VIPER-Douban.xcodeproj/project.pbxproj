@@ -13,7 +13,7 @@
 		D05687241E5E5ED5004CF504 /* TypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D05687231E5E5ED5004CF504 /* TypeCell.xib */; };
 		D05687261E5FA9CE004CF504 /* HorizontalSectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05687251E5FA9CE004CF504 /* HorizontalSectionPresenter.swift */; };
 		D05687281E5FA9E9004CF504 /* HorizontalSectionPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05687271E5FA9E9004CF504 /* HorizontalSectionPresenterProtocol.swift */; };
-		D0636D5C1E5AEBB10034E7B0 /* HorizontalSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0636D5B1E5AEBB10034E7B0 /* HorizontalSectionController.swift */; };
+		D0636D5C1E5AEBB10034E7B0 /* HorizontalTabSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0636D5B1E5AEBB10034E7B0 /* HorizontalTabSectionController.swift */; };
 		D0636D5E1E5AED1D0034E7B0 /* EmbeddedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0636D5D1E5AED1D0034E7B0 /* EmbeddedCollectionViewCell.swift */; };
 		D0636D601E5AEDD70034E7B0 /* EmbeddedSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0636D5F1E5AEDD70034E7B0 /* EmbeddedSectionController.swift */; };
 		D0636D621E5AEED10034E7B0 /* MovieItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0636D611E5AEED10034E7B0 /* MovieItemCell.swift */; };
@@ -46,6 +46,13 @@
 		D0F1AB071E65587F00069465 /* ActivityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F1AB051E65587F00069465 /* ActivityCell.xib */; };
 		D0F1AB141E6662FB00069465 /* SearchHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F1AB131E6662FB00069465 /* SearchHeaderView.swift */; };
 		D0F1AB161E66630600069465 /* SearchHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F1AB151E66630600069465 /* SearchHeaderView.xib */; };
+		D0F1AB241E66C78800069465 /* Top250Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F1AB231E66C78800069465 /* Top250Request.swift */; };
+		D0F1AB261E66C90C00069465 /* Top250InteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F1AB251E66C90C00069465 /* Top250InteractorProtocol.swift */; };
+		D0F1AB281E66C93800069465 /* Top250Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F1AB271E66C93800069465 /* Top250Interactor.swift */; };
+		D0F1AB2D1E67B9D800069465 /* Top250Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F1AB2C1E67B9D800069465 /* Top250Movies.swift */; };
+		D0F1AB2F1E67C50B00069465 /* HorizontalSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F1AB2E1E67C50B00069465 /* HorizontalSectionController.swift */; };
+		D0F1AB3E1E68026F00069465 /* CommonHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F1AB3C1E68026F00069465 /* CommonHeaderView.swift */; };
+		D0F1AB3F1E68026F00069465 /* CommonHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F1AB3D1E68026F00069465 /* CommonHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +75,7 @@
 		D05687231E5E5ED5004CF504 /* TypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TypeCell.xib; sourceTree = "<group>"; };
 		D05687251E5FA9CE004CF504 /* HorizontalSectionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalSectionPresenter.swift; sourceTree = "<group>"; };
 		D05687271E5FA9E9004CF504 /* HorizontalSectionPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalSectionPresenterProtocol.swift; sourceTree = "<group>"; };
-		D0636D5B1E5AEBB10034E7B0 /* HorizontalSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalSectionController.swift; sourceTree = "<group>"; };
+		D0636D5B1E5AEBB10034E7B0 /* HorizontalTabSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalTabSectionController.swift; sourceTree = "<group>"; };
 		D0636D5D1E5AED1D0034E7B0 /* EmbeddedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmbeddedCollectionViewCell.swift; sourceTree = "<group>"; };
 		D0636D5F1E5AEDD70034E7B0 /* EmbeddedSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmbeddedSectionController.swift; sourceTree = "<group>"; };
 		D0636D611E5AEED10034E7B0 /* MovieItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieItemCell.swift; sourceTree = "<group>"; };
@@ -105,6 +112,13 @@
 		D0F1AB051E65587F00069465 /* ActivityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityCell.xib; sourceTree = "<group>"; };
 		D0F1AB131E6662FB00069465 /* SearchHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchHeaderView.swift; sourceTree = "<group>"; };
 		D0F1AB151E66630600069465 /* SearchHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchHeaderView.xib; sourceTree = "<group>"; };
+		D0F1AB231E66C78800069465 /* Top250Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Top250Request.swift; sourceTree = "<group>"; };
+		D0F1AB251E66C90C00069465 /* Top250InteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Top250InteractorProtocol.swift; sourceTree = "<group>"; };
+		D0F1AB271E66C93800069465 /* Top250Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Top250Interactor.swift; sourceTree = "<group>"; };
+		D0F1AB2C1E67B9D800069465 /* Top250Movies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Top250Movies.swift; sourceTree = "<group>"; };
+		D0F1AB2E1E67C50B00069465 /* HorizontalSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalSectionController.swift; sourceTree = "<group>"; };
+		D0F1AB3C1E68026F00069465 /* CommonHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonHeaderView.swift; sourceTree = "<group>"; };
+		D0F1AB3D1E68026F00069465 /* CommonHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommonHeaderView.xib; sourceTree = "<group>"; };
 		F63CB8A8D6DFF171DA6C1312 /* Pods-VIPER-DoubanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-DoubanTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VIPER-DoubanTests/Pods-VIPER-DoubanTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +166,8 @@
 				D0F1AB051E65587F00069465 /* ActivityCell.xib */,
 				D0F1AB131E6662FB00069465 /* SearchHeaderView.swift */,
 				D0F1AB151E66630600069465 /* SearchHeaderView.xib */,
+				D0F1AB3C1E68026F00069465 /* CommonHeaderView.swift */,
+				D0F1AB3D1E68026F00069465 /* CommonHeaderView.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -159,7 +175,8 @@
 		D0636D7A1E5BDDC00034E7B0 /* SectionController */ = {
 			isa = PBXGroup;
 			children = (
-				D0636D5B1E5AEBB10034E7B0 /* HorizontalSectionController.swift */,
+				D0636D5B1E5AEBB10034E7B0 /* HorizontalTabSectionController.swift */,
+				D0F1AB2E1E67C50B00069465 /* HorizontalSectionController.swift */,
 				D0636D5F1E5AEDD70034E7B0 /* EmbeddedSectionController.swift */,
 				D0F1AB021E6557D800069465 /* ActivitySectionController.swift */,
 			);
@@ -171,6 +188,7 @@
 			children = (
 				D0636D7C1E5BEA460034E7B0 /* DisplayMovie.swift */,
 				D0636D7E1E5BEA740034E7B0 /* InTheatreAndComingSoonMovies.swift */,
+				D0F1AB2C1E67B9D800069465 /* Top250Movies.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -180,6 +198,7 @@
 			children = (
 				D09979AE1E54427200635B45 /* InTheatreMovieInteractorProtocol.swift */,
 				D06A774A1E59193A00ED238E /* ComingSoonMovieInteractorProtocol.swift */,
+				D0F1AB251E66C90C00069465 /* Top250InteractorProtocol.swift */,
 			);
 			name = protocol;
 			sourceTree = "<group>";
@@ -220,6 +239,7 @@
 			children = (
 				D08BF7701E588ADF000AE159 /* InTheatreMovieRequest.swift */,
 				D06A774E1E591A8900ED238E /* ComingSoonMovieRequest.swift */,
+				D0F1AB231E66C78800069465 /* Top250Request.swift */,
 			);
 			name = Request;
 			sourceTree = "<group>";
@@ -261,6 +281,7 @@
 				D06A77511E59339900ED238E /* protocol */,
 				D09979B01E544D3600635B45 /* InTheatreMovieInteractor.swift */,
 				D06A774C1E59194E00ED238E /* ComingSoonMovieInteractor.swift */,
+				D0F1AB271E66C93800069465 /* Top250Interactor.swift */,
 			);
 			name = Iteractor;
 			sourceTree = "<group>";
@@ -424,6 +445,7 @@
 			files = (
 				D09979951E53E47400635B45 /* LaunchScreen.storyboard in Resources */,
 				D0F1AA8D1E63ABF500069465 /* HeaderView.xib in Resources */,
+				D0F1AB3F1E68026F00069465 /* CommonHeaderView.xib in Resources */,
 				D09979921E53E47400635B45 /* Assets.xcassets in Resources */,
 				D09979901E53E47400635B45 /* Main.storyboard in Resources */,
 				D0F1AB071E65587F00069465 /* ActivityCell.xib in Resources */,
@@ -541,11 +563,14 @@
 			files = (
 				D09979B11E544D3600635B45 /* InTheatreMovieInteractor.swift in Sources */,
 				D099798D1E53E47400635B45 /* SuggestionViewController.swift in Sources */,
+				D0F1AB261E66C90C00069465 /* Top250InteractorProtocol.swift in Sources */,
 				D099798B1E53E47400635B45 /* AppDelegate.swift in Sources */,
 				D06A77541E593A0700ED238E /* CityName.swift in Sources */,
+				D0F1AB2F1E67C50B00069465 /* HorizontalSectionController.swift in Sources */,
 				D06A774B1E59193A00ED238E /* ComingSoonMovieInteractorProtocol.swift in Sources */,
 				D0636D7D1E5BEA460034E7B0 /* DisplayMovie.swift in Sources */,
-				D0636D5C1E5AEBB10034E7B0 /* HorizontalSectionController.swift in Sources */,
+				D0F1AB2D1E67B9D800069465 /* Top250Movies.swift in Sources */,
+				D0636D5C1E5AEBB10034E7B0 /* HorizontalTabSectionController.swift in Sources */,
 				D0F1AB031E6557D800069465 /* ActivitySectionController.swift in Sources */,
 				D08BF76A1E5882F7000AE159 /* Decodable.swift in Sources */,
 				D06A774F1E591A8900ED238E /* ComingSoonMovieRequest.swift in Sources */,
@@ -560,10 +585,13 @@
 				D0636D5E1E5AED1D0034E7B0 /* EmbeddedCollectionViewCell.swift in Sources */,
 				D0F1AB061E65587F00069465 /* ActivityCell.swift in Sources */,
 				D09979AF1E54427200635B45 /* InTheatreMovieInteractorProtocol.swift in Sources */,
+				D0F1AB281E66C93800069465 /* Top250Interactor.swift in Sources */,
 				D08F1E341E558E9000390532 /* Movie.swift in Sources */,
 				D0636D7F1E5BEA740034E7B0 /* InTheatreAndComingSoonMovies.swift in Sources */,
 				D06A774D1E59194E00ED238E /* ComingSoonMovieInteractor.swift in Sources */,
+				D0F1AB3E1E68026F00069465 /* CommonHeaderView.swift in Sources */,
 				D05687261E5FA9CE004CF504 /* HorizontalSectionPresenter.swift in Sources */,
+				D0F1AB241E66C78800069465 /* Top250Request.swift in Sources */,
 				D0636D621E5AEED10034E7B0 /* MovieItemCell.swift in Sources */,
 				D08BF7681E588276000AE159 /* Request.swift in Sources */,
 				D08BF7711E588ADF000AE159 /* InTheatreMovieRequest.swift in Sources */,

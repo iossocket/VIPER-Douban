@@ -11,7 +11,7 @@ class SuggestionViewController: UIViewController {
     let disposeBag = DisposeBag()
     let presenter = container.resolve(SuggestionPresenterProtocol.self)
     
-    fileprivate var data: Array<Any> = []
+    fileprivate var data: Array<Any> = ["activity"]
     
     let collectionView: IGListCollectionView = {
         let view = IGListCollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
@@ -68,7 +68,8 @@ class SuggestionViewController: UIViewController {
     
     private func fetchMovie() {
         self.presenter?.fetchMovies().subscribe(onNext: {
-            self.data = [$0]
+            self.data.insert($0.0, at: 1)
+            self.data.insert($0.1, at: 2)
             self.adaptor.performUpdates(animated: false)
         }).addDisposableTo(disposeBag)
     }
@@ -76,7 +77,6 @@ class SuggestionViewController: UIViewController {
 
 extension SuggestionViewController: IGListAdapterDataSource {
     func objects(for listAdapter: IGListAdapter) -> [IGListDiffable] {
-        data.insert("activity", at: 0)
         guard let data = data as? [IGListDiffable] else {
             return []
         }
@@ -85,6 +85,8 @@ extension SuggestionViewController: IGListAdapterDataSource {
     
     func listAdapter(_ listAdapter: IGListAdapter, sectionControllerFor object: Any) -> IGListSectionController {
         if object is InTheatreAndComingSoonMovies {
+            return HorizontalTabSectionController()
+        } else if object is Top250Movies {
             return HorizontalSectionController()
         }
         return ActivitySectionController()
