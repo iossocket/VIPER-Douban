@@ -45,9 +45,6 @@ class EmbeddedSectionController: IGListSectionController, IGListSectionType {
     }
     
     func didSelectItem(at index: Int) {
-        let detail = MovieDetailViewController()
-        detail.image.kf.setImage(with: URL(string: data!.imageUrl))
-        detail.id = data!.imageUrl
-        viewController?.show(detail, sender: nil)
+        SuggestionRouter().showDetailViewController(from: viewController, by: data?.imageUrl)
     }
 }

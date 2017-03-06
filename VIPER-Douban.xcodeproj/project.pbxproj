@@ -28,6 +28,8 @@
 		D08BF76C1E588344000AE159 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08BF76B1E588344000AE159 /* Client.swift */; };
 		D08BF76E1E5883D9000AE159 /* AlamofireClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08BF76D1E5883D9000AE159 /* AlamofireClient.swift */; };
 		D08BF7711E588ADF000AE159 /* InTheatreMovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08BF7701E588ADF000AE159 /* InTheatreMovieRequest.swift */; };
+		D08C05531E6D8E3000017890 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D08C05521E6D8E3000017890 /* Detail.storyboard */; };
+		D08C05561E6D935400017890 /* SuggestionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C05551E6D935400017890 /* SuggestionRouter.swift */; };
 		D08F1E341E558E9000390532 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08F1E331E558E9000390532 /* Movie.swift */; };
 		D099798B1E53E47400635B45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D099798A1E53E47400635B45 /* AppDelegate.swift */; };
 		D099798D1E53E47400635B45 /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D099798C1E53E47400635B45 /* SuggestionViewController.swift */; };
@@ -91,6 +93,8 @@
 		D08BF76B1E588344000AE159 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		D08BF76D1E5883D9000AE159 /* AlamofireClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireClient.swift; sourceTree = "<group>"; };
 		D08BF7701E588ADF000AE159 /* InTheatreMovieRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InTheatreMovieRequest.swift; sourceTree = "<group>"; };
+		D08C05521E6D8E3000017890 /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		D08C05551E6D935400017890 /* SuggestionRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionRouter.swift; sourceTree = "<group>"; };
 		D08F1E331E558E9000390532 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		D09979871E53E47400635B45 /* VIPER-Douban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIPER-Douban.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D099798A1E53E47400635B45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -246,9 +250,27 @@
 			name = Request;
 			sourceTree = "<group>";
 		};
+		D08C05511E6D8E2100017890 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				D0DCD2431E6CED3B00A768C5 /* MovieDetailViewController.swift */,
+				D08C05521E6D8E3000017890 /* Detail.storyboard */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		D08C05541E6D933500017890 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D08C05551E6D935400017890 /* SuggestionRouter.swift */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
 		D08F1E301E55442800390532 /* Suggestion */ = {
 			isa = PBXGroup;
 			children = (
+				D08C05541E6D933500017890 /* Router */,
 				D0636D7B1E5BEA2F0034E7B0 /* ViewModel */,
 				D08F1E421E56E77D00390532 /* Presenter */,
 				D08F1E411E56E76F00390532 /* View */,
@@ -262,7 +284,6 @@
 				D0636D7A1E5BDDC00034E7B0 /* SectionController */,
 				D0636D791E5BDDAD0034E7B0 /* Cell */,
 				D099798C1E53E47400635B45 /* SuggestionViewController.swift */,
-				D0DCD2431E6CED3B00A768C5 /* MovieDetailViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -312,6 +333,7 @@
 		D09979891E53E47400635B45 /* VIPER-Douban */ = {
 			isa = PBXGroup;
 			children = (
+				D08C05511E6D8E2100017890 /* Detail */,
 				D08BF7651E588244000AE159 /* App */,
 				D08F1E301E55442800390532 /* Suggestion */,
 				D099799F1E53E8F000635B45 /* Resource */,
@@ -448,6 +470,7 @@
 			files = (
 				D09979951E53E47400635B45 /* LaunchScreen.storyboard in Resources */,
 				D0F1AA8D1E63ABF500069465 /* HeaderView.xib in Resources */,
+				D08C05531E6D8E3000017890 /* Detail.storyboard in Resources */,
 				D0F1AB3F1E68026F00069465 /* CommonHeaderView.xib in Resources */,
 				D09979921E53E47400635B45 /* Assets.xcassets in Resources */,
 				D09979901E53E47400635B45 /* Main.storyboard in Resources */,
@@ -565,6 +588,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D09979B11E544D3600635B45 /* InTheatreMovieInteractor.swift in Sources */,
+				D08C05561E6D935400017890 /* SuggestionRouter.swift in Sources */,
 				D099798D1E53E47400635B45 /* SuggestionViewController.swift in Sources */,
 				D0F1AB261E66C90C00069465 /* Top250InteractorProtocol.swift in Sources */,
 				D099798B1E53E47400635B45 /* AppDelegate.swift in Sources */,

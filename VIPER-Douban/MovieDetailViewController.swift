@@ -8,28 +8,23 @@
 
 import UIKit
 import Hero
+import Kingfisher
 
 class MovieDetailViewController: UIViewController {
 
-    let image: UIImageView = UIImageView()
-    var id: String = ""
+    @IBOutlet weak var headerImageView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var movieTitle: UILabel!
+    @IBOutlet weak var originTitle: UILabel!
+    
+    var movieImageUrl: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.white
-        navigationController?.navigationBar.isHidden = false
-        view.heroModifiers = [.fade]
-        
         isHeroEnabled = true
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.heroID = id
-        
-        view.addSubview(image)
-        image.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
-        image.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
-        image.widthAnchor.constraint(equalToConstant: 100).isActive = true
-        image.heightAnchor.constraint(equalToConstant: 120).isActive = true
-        image.contentMode = .scaleAspectFill
-        image.clipsToBounds = true
+        view.heroModifiers = [.fade]
+        navigationController?.navigationBar.isHidden = false
+        imageView.heroID = movieImageUrl
+        imageView.kf.setImage(with: URL(string: movieImageUrl))
     }
 }
