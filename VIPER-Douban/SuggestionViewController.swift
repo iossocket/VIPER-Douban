@@ -26,6 +26,7 @@ class SuggestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.isHeroEnabled = true
         configUI()
         adaptor.collectionView = collectionView
         adaptor.dataSource = self

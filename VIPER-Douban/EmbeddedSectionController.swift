@@ -34,6 +34,7 @@ class EmbeddedSectionController: IGListSectionController, IGListSectionType {
             return cell
         }
         cell.imageView.kf.setImage(with: URL(string: movie.imageUrl))
+        cell.imageView.heroID = movie.imageUrl
         cell.titleLabel.text = movie.title
         cell.configStars(star: movie.star)
         return cell
@@ -43,5 +44,10 @@ class EmbeddedSectionController: IGListSectionController, IGListSectionType {
         data = object as? DisplayMovie
     }
     
-    func didSelectItem(at index: Int) {}
+    func didSelectItem(at index: Int) {
+        let detail = MovieDetailViewController()
+        detail.image.kf.setImage(with: URL(string: data!.imageUrl))
+        detail.id = data!.imageUrl
+        viewController?.show(detail, sender: nil)
+    }
 }

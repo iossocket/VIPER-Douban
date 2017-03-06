@@ -31,10 +31,6 @@ class SuggestionPresenter: SuggestionPresenterProtocol {
         }
     }
     
-    func fetchTop250() {
-        
-    }
-    
     private func mapMovieToDisplayMovie(movies: Array<Movie>) -> Array<DisplayMovie> {
         return movies.map({ movie -> DisplayMovie in
             let rating = movie.rating
