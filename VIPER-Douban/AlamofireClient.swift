@@ -19,6 +19,8 @@ struct AlamofireClient: Client {
         let method = mapAPIMethodToHTTPMethod(apiMethod: request.method)
         return RxAlamofire.requestJSON(method, url, parameters: request.parameter, encoding: URLEncoding.default, headers: request.header).map({ (response, data) -> T.Response? in
             T.Response.parse(data: data)
+        }).catchError({ error -> Observable<T.Response?> in
+            Observable.just(nil)
         })
     }
     

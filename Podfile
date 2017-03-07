@@ -10,6 +10,7 @@ target 'VIPER-Douban' do
   pod 'Kingfisher', '~> 3.3.1'
   pod 'Cosmos', '~> 8.0'
   pod 'Hero', '~> 0.3.3'
+  pod 'RealmSwift', '~> 2.4.3'
   
   post_install do |installer|
       installer.pods_project.targets.each do |target|

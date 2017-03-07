@@ -7,6 +7,11 @@ PODS:
   - Nimble (5.1.1)
   - ObjectMapper (2.2.2)
   - Quick (1.0.0)
+  - Realm (2.4.3):
+    - Realm/Headers (= 2.4.3)
+  - Realm/Headers (2.4.3)
+  - RealmSwift (2.4.3):
+    - Realm (= 2.4.3)
   - RxAlamofire (3.0.2):
     - RxAlamofire/Core (= 3.0.2)
   - RxAlamofire/Core (3.0.2):
@@ -24,6 +29,7 @@ DEPENDENCIES:
   - Nimble (~> 5.1.1)
   - ObjectMapper (~> 2.2.2)
   - Quick (~> 1.0.0)
+  - RealmSwift (~> 2.4.3)
   - RxAlamofire
   - RxSwift (~> 3.1.0)
   - Swinject (~> 2.0.0)
@@ -37,10 +43,12 @@ SPEC CHECKSUMS:
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
   ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
   Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
+  Realm: e08d60b0048ccccd3949c8c28a92c4db5712d7e9
+  RealmSwift: 30d49739ccb3385d201242736ca4dda56aec9dfc
   RxAlamofire: bc53604b29fd2d220cfaa490c736cc4500819f34
   RxSwift: 83ff553e7593fdfdcb2562933a64c0284dffdadc
   Swinject: 2e964a80d70ab09b3949c99032711f89147bfd60
 
-PODFILE CHECKSUM: 5ed2f0433bc91265505620664fb5f79636b60ff7
+PODFILE CHECKSUM: 76a5e4d4c11f10e972b1810b726f437aa8a94c66
 
 COCOAPODS: 1.0.1
