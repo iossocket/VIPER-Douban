@@ -9,5 +9,6 @@
 import Foundation
 
 protocol MovieRLMInteractorProtocol {
-    func saveMoviesToRealm(movies: Array<Movie>) -> Array<Movie>
+    func saveMoviesToRealm(movies: Array<Movie>, type: MovieTypeEnum) -> Array<Movie>
+    func fetchMoviesFromRealm(type: MovieTypeEnum) -> Array<Movie>
 }

@@ -8,8 +8,18 @@
 
 import RealmSwift
 
+enum MovieTypeEnum: String {
+    case InTheatre = "InTheatre"
+    case ComingSoon = "ComingSoon"
+    case Top250 = "Top250"
+}
+
 class RealmString: Object {
-    dynamic var stringValue = ""
+    dynamic var stringValue: String = ""
+    convenience init(string: String) {
+        self.init()
+        self.stringValue = string
+    }
 }
 
 class MovieRLM: Object {
@@ -21,6 +31,7 @@ class MovieRLM: Object {
     dynamic var imageSmall: String = ""
     dynamic var imageMedium: String = ""
     dynamic var imageLarge: String = ""
+    dynamic var type: String = ""
     
     dynamic var rating: RatingRLM?
     
@@ -28,7 +39,11 @@ class MovieRLM: Object {
     let casts = List<CastRLM>()
     let directors = List<DirectorRLM>()
     
-    convenience init(movie: Movie) {
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+    
+    convenience init(movie: Movie, type: MovieTypeEnum) {
         self.init()
         self.id = movie.id
         self.year = movie.year
@@ -41,7 +56,7 @@ class MovieRLM: Object {
         
         self.rating = RatingRLM(rating: movie.rating)
         movie.genres.forEach { item in
-            self.genres.append(RealmString(value: item))
+            self.genres.append(RealmString(string: item))
         }
         movie.casts.forEach { item in
             self.casts.append(CastRLM(cast: item))
@@ -49,6 +64,8 @@ class MovieRLM: Object {
         movie.directors.forEach { item in
             self.directors.append(DirectorRLM(director: item))
         }
+        
+        self.type = type.rawValue
     }
 }
 

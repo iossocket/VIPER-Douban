@@ -55,6 +55,28 @@ struct Movie: Mappable {
     }
 }
 
+extension Movie {
+    init(_ movieRLM: MovieRLM) {
+        self.id = movieRLM.id
+        self.year = movieRLM.year
+        self.title = movieRLM.title
+        self.originalTitle = movieRLM.originalTitle
+        
+        self.genres = movieRLM.genres.map({ item -> String in
+            item.stringValue
+        })
+        self.rating = Rating(movieRLM.rating) ?? Rating()
+        self.collectCount = movieRLM.collectCount
+        self.images = (movieRLM.imageSmall, movieRLM.imageMedium, movieRLM.imageLarge)
+        movieRLM.casts.forEach { item in
+            self.casts.append(Cast(item))
+        }
+        movieRLM.directors.forEach { item in
+            self.directors.append(Director(item))
+        }
+    }
+}
+
 struct Rating: Mappable {
     var max: Int = 0
     var min: Int = 0
@@ -79,6 +101,16 @@ struct Rating: Mappable {
     }
 }
 
+extension Rating {
+    init?(_ ratingRLM: RatingRLM?) {
+        guard let ratingRLM = ratingRLM else { return nil }
+        self.max = ratingRLM.max
+        self.min = ratingRLM.min
+        self.average = ratingRLM.average
+        self.stars = ratingRLM.stars
+    }
+}
+
 struct Cast: Mappable {
     var id: String = ""
     var name: String = ""
@@ -94,6 +126,14 @@ struct Cast: Mappable {
     }
 }
 
+extension Cast {
+    init(_ castRLM: CastRLM) {
+        self.id = castRLM.id
+        self.name = castRLM.name
+        self.avatars = (castRLM.avatarSmall, castRLM.avatarMedium, castRLM.avatarLarge)
+    }
+}
+
 struct Director: Mappable  {
     var id: String = ""
     var name: String = ""
@@ -106,6 +146,14 @@ struct Director: Mappable  {
         id      <- map["id"]
         name    <- map["name"]
         avatars <- (map["avatars"], ImagesTransformer())
+    }
+}
+
+extension Director {
+    init(_ directorRLM: DirectorRLM) {
+        self.id = directorRLM.id
+        self.name = directorRLM.name
+        self.avatars = (directorRLM.avatarSmall, directorRLM.avatarMedium, directorRLM.avatarLarge)
     }
 }
 

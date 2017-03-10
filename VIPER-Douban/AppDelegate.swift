@@ -27,4 +27,7 @@ let container = Container() { c in
     c.register(Top250InteractorProtocol.self) { _ in Top250Interactor() }
     c.register(Client.self) { _ in AlamofireClient()}
     c.register(HorizontalSectionPresenterProtocol.self) { _ in HorizontalSectionPresenter(currentType: .inTheatre)}
+    c.register(MovieRLMInteractorProtocol.self) { _ in
+        MovieRLMInteractor()
+    }
 }
