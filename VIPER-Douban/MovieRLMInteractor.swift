@@ -30,4 +30,13 @@ struct MovieRLMInteractor: MovieRLMInteractorProtocol {
         }
         return arr
     }
+    
+    func fetchMovieBy(_ id: String) -> Movie? {
+        let realm = try! Realm()
+        let predicate = NSPredicate(format: "id = %@", id)
+        guard let movie = realm.objects(MovieRLM.self).filter(predicate).first else {
+            return nil
+        }
+        return Movie(movie)
+    }
 }
