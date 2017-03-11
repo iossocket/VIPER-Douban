@@ -11,20 +11,25 @@ import Hero
 import Kingfisher
 
 class MovieDetailViewController: UIViewController {
-
-    @IBOutlet weak var headerImageView: UIImageView!
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var movieTitle: UILabel!
-    @IBOutlet weak var originTitle: UILabel!
     
     var movieImageUrl: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configBackgroundUI()
+    }
+    
+    private func configBackgroundUI() {
+        view.backgroundColor = UIColor.white
+        navigationController?.navigationBar.isHidden = false
         isHeroEnabled = true
         view.heroModifiers = [.fade]
-        navigationController?.navigationBar.isHidden = false
-        imageView.heroID = movieImageUrl
-        imageView.kf.setImage(with: URL(string: movieImageUrl))
+        let backItem = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(back))
+        backItem.image = UIImage(named: "back")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        navigationItem.leftBarButtonItem = backItem
+    }
+    
+    func back() {
+        _ = navigationController?.popViewController(animated: true)
     }
 }
