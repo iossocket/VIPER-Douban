@@ -28,7 +28,6 @@
 		D08BF76C1E588344000AE159 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08BF76B1E588344000AE159 /* Client.swift */; };
 		D08BF76E1E5883D9000AE159 /* AlamofireClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08BF76D1E5883D9000AE159 /* AlamofireClient.swift */; };
 		D08BF7711E588ADF000AE159 /* InTheatreMovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08BF7701E588ADF000AE159 /* InTheatreMovieRequest.swift */; };
-		D08C05531E6D8E3000017890 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D08C05521E6D8E3000017890 /* Detail.storyboard */; };
 		D08C05561E6D935400017890 /* SuggestionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C05551E6D935400017890 /* SuggestionRouter.swift */; };
 		D08C05581E6E4FFD00017890 /* MovieRLM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C05571E6E4FFD00017890 /* MovieRLM.swift */; };
 		D08C05701E6E9DD700017890 /* MovieRLMInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C056F1E6E9DD700017890 /* MovieRLMInteractorProtocol.swift */; };
@@ -59,6 +58,8 @@
 		D0F1AB2F1E67C50B00069465 /* HorizontalSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F1AB2E1E67C50B00069465 /* HorizontalSectionController.swift */; };
 		D0F1AB3E1E68026F00069465 /* CommonHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F1AB3C1E68026F00069465 /* CommonHeaderView.swift */; };
 		D0F1AB3F1E68026F00069465 /* CommonHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F1AB3D1E68026F00069465 /* CommonHeaderView.xib */; };
+		D0F80A721E76810500A32331 /* MovieGallaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F80A711E76810500A32331 /* MovieGallaryCollectionViewCell.swift */; };
+		D0F80A741E76871800A32331 /* MovieDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F80A731E76871800A32331 /* MovieDetailPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,7 +97,6 @@
 		D08BF76B1E588344000AE159 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		D08BF76D1E5883D9000AE159 /* AlamofireClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireClient.swift; sourceTree = "<group>"; };
 		D08BF7701E588ADF000AE159 /* InTheatreMovieRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InTheatreMovieRequest.swift; sourceTree = "<group>"; };
-		D08C05521E6D8E3000017890 /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		D08C05551E6D935400017890 /* SuggestionRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionRouter.swift; sourceTree = "<group>"; };
 		D08C05571E6E4FFD00017890 /* MovieRLM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieRLM.swift; sourceTree = "<group>"; };
 		D08C056F1E6E9DD700017890 /* MovieRLMInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieRLMInteractorProtocol.swift; sourceTree = "<group>"; };
@@ -131,6 +131,8 @@
 		D0F1AB2E1E67C50B00069465 /* HorizontalSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalSectionController.swift; sourceTree = "<group>"; };
 		D0F1AB3C1E68026F00069465 /* CommonHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonHeaderView.swift; sourceTree = "<group>"; };
 		D0F1AB3D1E68026F00069465 /* CommonHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommonHeaderView.xib; sourceTree = "<group>"; };
+		D0F80A711E76810500A32331 /* MovieGallaryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieGallaryCollectionViewCell.swift; sourceTree = "<group>"; };
+		D0F80A731E76871800A32331 /* MovieDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailPresenter.swift; sourceTree = "<group>"; };
 		F63CB8A8D6DFF171DA6C1312 /* Pods-VIPER-DoubanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-DoubanTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VIPER-DoubanTests/Pods-VIPER-DoubanTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -262,7 +264,8 @@
 			isa = PBXGroup;
 			children = (
 				D0DCD2431E6CED3B00A768C5 /* MovieDetailViewController.swift */,
-				D08C05521E6D8E3000017890 /* Detail.storyboard */,
+				D0F80A711E76810500A32331 /* MovieGallaryCollectionViewCell.swift */,
+				D0F80A731E76871800A32331 /* MovieDetailPresenter.swift */,
 			);
 			name = Detail;
 			sourceTree = "<group>";
@@ -479,7 +482,6 @@
 			files = (
 				D09979951E53E47400635B45 /* LaunchScreen.storyboard in Resources */,
 				D0F1AA8D1E63ABF500069465 /* HeaderView.xib in Resources */,
-				D08C05531E6D8E3000017890 /* Detail.storyboard in Resources */,
 				D0F1AB3F1E68026F00069465 /* CommonHeaderView.xib in Resources */,
 				D09979921E53E47400635B45 /* Assets.xcassets in Resources */,
 				D09979901E53E47400635B45 /* Main.storyboard in Resources */,
@@ -617,6 +619,7 @@
 				D09979B31E54505500635B45 /* SuggestionPresenterProtocol.swift in Sources */,
 				D0DCD2441E6CED3B00A768C5 /* MovieDetailViewController.swift in Sources */,
 				D05687281E5FA9E9004CF504 /* HorizontalSectionPresenterProtocol.swift in Sources */,
+				D0F80A721E76810500A32331 /* MovieGallaryCollectionViewCell.swift in Sources */,
 				D09979B51E54507500635B45 /* SuggestionPresenter.swift in Sources */,
 				D08BF76E1E5883D9000AE159 /* AlamofireClient.swift in Sources */,
 				D0636D601E5AEDD70034E7B0 /* EmbeddedSectionController.swift in Sources */,
@@ -625,6 +628,7 @@
 				D0F1AB061E65587F00069465 /* ActivityCell.swift in Sources */,
 				D09979AF1E54427200635B45 /* InTheatreMovieInteractorProtocol.swift in Sources */,
 				D0F1AB281E66C93800069465 /* Top250Interactor.swift in Sources */,
+				D0F80A741E76871800A32331 /* MovieDetailPresenter.swift in Sources */,
 				D08F1E341E558E9000390532 /* Movie.swift in Sources */,
 				D08C05581E6E4FFD00017890 /* MovieRLM.swift in Sources */,
 				D0636D7F1E5BEA740034E7B0 /* InTheatreAndComingSoonMovies.swift in Sources */,
