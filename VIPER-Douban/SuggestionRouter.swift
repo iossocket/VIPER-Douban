@@ -13,9 +13,7 @@ struct SuggestionRouter {
         guard let vc = viewController, let url = imageViewUrl else {
             return
         }
-        guard let detail = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: "MovieDetailViewController") as? MovieDetailViewController else {
-            return
-        }
+        let detail = MovieDetailViewController()
         
         detail.movieImageUrl = url
         vc.show(detail, sender: nil)

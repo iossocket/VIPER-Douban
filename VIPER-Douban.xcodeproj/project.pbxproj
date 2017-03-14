@@ -60,6 +60,7 @@
 		D0F1AB3F1E68026F00069465 /* CommonHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F1AB3D1E68026F00069465 /* CommonHeaderView.xib */; };
 		D0F80A721E76810500A32331 /* MovieGallaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F80A711E76810500A32331 /* MovieGallaryCollectionViewCell.swift */; };
 		D0F80A741E76871800A32331 /* MovieDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F80A731E76871800A32331 /* MovieDetailPresenter.swift */; };
+		D0F80AAD1E77D64300A32331 /* MovieDetailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F80AAC1E77D64300A32331 /* MovieDetailInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,7 @@
 		D0F1AB3D1E68026F00069465 /* CommonHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommonHeaderView.xib; sourceTree = "<group>"; };
 		D0F80A711E76810500A32331 /* MovieGallaryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieGallaryCollectionViewCell.swift; sourceTree = "<group>"; };
 		D0F80A731E76871800A32331 /* MovieDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailPresenter.swift; sourceTree = "<group>"; };
+		D0F80AAC1E77D64300A32331 /* MovieDetailInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailInfoViewController.swift; sourceTree = "<group>"; };
 		F63CB8A8D6DFF171DA6C1312 /* Pods-VIPER-DoubanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-DoubanTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VIPER-DoubanTests/Pods-VIPER-DoubanTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -264,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				D0DCD2431E6CED3B00A768C5 /* MovieDetailViewController.swift */,
+				D0F80AAC1E77D64300A32331 /* MovieDetailInfoViewController.swift */,
 				D0F80A711E76810500A32331 /* MovieGallaryCollectionViewCell.swift */,
 				D0F80A731E76871800A32331 /* MovieDetailPresenter.swift */,
 			);
@@ -612,6 +615,7 @@
 				D0F1AB2D1E67B9D800069465 /* Top250Movies.swift in Sources */,
 				D0636D5C1E5AEBB10034E7B0 /* HorizontalTabSectionController.swift in Sources */,
 				D0F1AB031E6557D800069465 /* ActivitySectionController.swift in Sources */,
+				D0F80AAD1E77D64300A32331 /* MovieDetailInfoViewController.swift in Sources */,
 				D08BF76A1E5882F7000AE159 /* Decodable.swift in Sources */,
 				D06A774F1E591A8900ED238E /* ComingSoonMovieRequest.swift in Sources */,
 				D08BF76C1E588344000AE159 /* Client.swift in Sources */,

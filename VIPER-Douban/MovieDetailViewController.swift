@@ -15,11 +15,22 @@ class MovieDetailViewController: UIViewController {
     var movieImageUrl: String!
     var collectionView: UICollectionView!
     let presenter = MovieDetailPresenter()
+    var headerImageScrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configBackgroundUI()
         configCollectionView()
+        configHeaderImageScrollView()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        tabBarController?.tabBar.isHidden = false
+    }
+    
+    func back() {
+        _ = navigationController?.popViewController(animated: true)
     }
     
     private func configBackgroundUI() {
@@ -34,15 +45,6 @@ class MovieDetailViewController: UIViewController {
         tabBarController?.tabBar.isHidden = true
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        tabBarController?.tabBar.isHidden = false
-    }
-    
-    func back() {
-        _ = navigationController?.popViewController(animated: true)
-    }
-    
     private func configCollectionView() {
         collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.dataSource = self
@@ -55,6 +57,29 @@ class MovieDetailViewController: UIViewController {
         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor).isActive = true
         collectionView.register(MovieGallaryCollectionViewCell.self, forCellWithReuseIdentifier: "GallaryCell")
+    }
+    
+    private func configHeaderImageScrollView() {
+        headerImageScrollView = UIScrollView()
+        headerImageScrollView.delegate = self
+        headerImageScrollView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(headerImageScrollView)
+        headerImageScrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        headerImageScrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        headerImageScrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        headerImageScrollView.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor).isActive = true
+        
+        let headerImageView = UIImageView(image: UIImage(named: "1"))
+        headerImageView.translatesAutoresizingMaskIntoConstraints = false
+        headerImageView.contentMode = UIViewContentMode.scaleAspectFill
+        headerImageScrollView.addSubview(headerImageView)
+        headerImageView.topAnchor.constraint(equalTo: headerImageScrollView.topAnchor).isActive = true
+        headerImageView.leadingAnchor.constraint(equalTo: headerImageScrollView.leadingAnchor).isActive = true
+        headerImageView.trailingAnchor.constraint(equalTo: headerImageScrollView.trailingAnchor).isActive = true
+        headerImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        headerImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        headerImageView.heightAnchor.constraint(equalToConstant: view.bounds.width * 0.618).isActive = true
+        headerImageScrollView.bottomAnchor.constraint(equalTo: headerImageView.bottomAnchor, constant: 600).isActive = true
     }
 }
 
@@ -82,5 +107,13 @@ extension MovieDetailViewController: UICollectionViewDataSource, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 8
+    }
+}
+
+extension MovieDetailViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y < 0 {
+            scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
+        }
     }
 }

@@ -21,6 +21,7 @@ class MovieGallaryCollectionViewCell: UICollectionViewCell {
         imageView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         imageView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         imageView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        imageView.contentMode = UIViewContentMode.scaleAspectFill
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lkk-LJ-ZaU">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lkk-LJ-ZaU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -77,13 +77,40 @@
                     <view key="view" contentMode="scaleToFill" id="ffW-DO-67i">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vUb-9r-nXn">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="vgL-wy-YGd">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="171" id="fx6-Ty-TyX"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="vgL-wy-YGd" firstAttribute="top" secondItem="vUb-9r-nXn" secondAttribute="top" id="Gcm-dJ-wvh"/>
+                                    <constraint firstAttribute="trailing" secondItem="vgL-wy-YGd" secondAttribute="trailing" id="LQO-fS-Cpa"/>
+                                    <constraint firstItem="vgL-wy-YGd" firstAttribute="leading" secondItem="vUb-9r-nXn" secondAttribute="leading" id="oUa-7I-bvI"/>
+                                    <constraint firstAttribute="bottom" secondItem="vgL-wy-YGd" secondAttribute="bottom" constant="1000" id="yDN-0u-KFr"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vUb-9r-nXn" firstAttribute="top" secondItem="2VV-AA-oAW" secondAttribute="bottom" id="5vo-22-Lfg"/>
+                            <constraint firstAttribute="trailing" secondItem="vgL-wy-YGd" secondAttribute="trailing" id="HBl-YH-mcP"/>
+                            <constraint firstAttribute="trailing" secondItem="vUb-9r-nXn" secondAttribute="trailing" id="ctu-de-Z1y"/>
+                            <constraint firstItem="F4k-Hr-Ymw" firstAttribute="top" secondItem="vUb-9r-nXn" secondAttribute="bottom" id="vBe-il-ihL"/>
+                            <constraint firstItem="vUb-9r-nXn" firstAttribute="leading" secondItem="ffW-DO-67i" secondAttribute="leading" id="wu2-tb-3Zd"/>
+                            <constraint firstItem="vgL-wy-YGd" firstAttribute="leading" secondItem="ffW-DO-67i" secondAttribute="leading" id="yMr-HY-D4C"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="电影" image="film" id="7Pe-on-I1B"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgc-RV-U4t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1079" y="860"/>
+            <point key="canvasLocation" x="1077.5999999999999" y="859.52023988005999"/>
         </scene>
         <!--我-->
         <scene sceneID="j9k-k5-n21">
@@ -106,6 +133,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1" width="600" height="315"/>
         <image name="film" width="25" height="25"/>
         <image name="me" width="25" height="25"/>
         <image name="suggestion" width="25" height="27"/>
