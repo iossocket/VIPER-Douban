@@ -22,6 +22,7 @@ class MovieDetailViewController: UIViewController {
         configBackgroundUI()
         configCollectionView()
         configHeaderImageScrollView()
+        configChildViewController()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -61,6 +62,7 @@ class MovieDetailViewController: UIViewController {
     
     private func configHeaderImageScrollView() {
         headerImageScrollView = UIScrollView()
+        headerImageScrollView.tag = 1000
         headerImageScrollView.delegate = self
         headerImageScrollView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(headerImageScrollView)
@@ -80,6 +82,20 @@ class MovieDetailViewController: UIViewController {
         headerImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         headerImageView.heightAnchor.constraint(equalToConstant: view.bounds.width * 0.618).isActive = true
         headerImageScrollView.bottomAnchor.constraint(equalTo: headerImageView.bottomAnchor, constant: 600).isActive = true
+    }
+    
+    private func configChildViewController() {
+        let infoVC = MovieDetailInfoViewController()
+        infoVC.scrollView.tag = 1001
+        infoVC.scrollView.delegate = self
+        addChildViewController(infoVC)
+        infoVC.view.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(infoVC.view)
+        infoVC.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        infoVC.view.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        infoVC.view.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        infoVC.view.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor).isActive = true
+        infoVC.didMove(toParentViewController: self)
     }
 }
 
@@ -112,8 +128,12 @@ extension MovieDetailViewController: UICollectionViewDataSource, UICollectionVie
 
 extension MovieDetailViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y < 0 {
-            scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
+        if scrollView.tag == 1000 {
+            if scrollView.contentOffset.y < 0 {
+                scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
+            }
+        } else if scrollView.tag == 1001 {
+            headerImageScrollView.setContentOffset(CGPoint(x: 0, y: scrollView.contentOffset.y), animated: false)
         }
     }
 }
