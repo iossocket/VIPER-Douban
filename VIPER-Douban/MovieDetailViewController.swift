@@ -15,7 +15,10 @@ class MovieDetailViewController: UIViewController {
     var movieImageUrl: String!
     var collectionView: UICollectionView!
     let presenter = MovieDetailPresenter()
+    let infoVC = MovieDetailInfoViewController()
     var headerImageScrollView: UIScrollView!
+    var top: NSLayoutConstraint!
+    var bottom: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +65,7 @@ class MovieDetailViewController: UIViewController {
     
     private func configHeaderImageScrollView() {
         headerImageScrollView = UIScrollView()
+        headerImageScrollView.backgroundColor = UIColor.lightGray
         headerImageScrollView.tag = 1000
         headerImageScrollView.delegate = self
         headerImageScrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -85,16 +89,18 @@ class MovieDetailViewController: UIViewController {
     }
     
     private func configChildViewController() {
-        let infoVC = MovieDetailInfoViewController()
         infoVC.scrollView.tag = 1001
         infoVC.scrollView.delegate = self
         addChildViewController(infoVC)
         infoVC.view.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(infoVC.view)
-        infoVC.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        top = infoVC.view.topAnchor.constraint(equalTo: view.topAnchor)
+        bottom = infoVC.view.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor)
+        top.isActive = true
+        bottom.isActive = true
+        
         infoVC.view.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         infoVC.view.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        infoVC.view.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor).isActive = true
         infoVC.didMove(toParentViewController: self)
     }
 }
@@ -134,6 +140,19 @@ extension MovieDetailViewController: UIScrollViewDelegate {
             }
         } else if scrollView.tag == 1001 {
             headerImageScrollView.setContentOffset(CGPoint(x: 0, y: scrollView.contentOffset.y), animated: false)
+        }
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if scrollView.tag == 1001 && scrollView.contentOffset.y < -20 {
+            view.layoutIfNeeded()
+            self.top.constant = UIScreen.main.bounds.height
+            self.bottom.constant = UIScreen.main.bounds.height
+            UIView.animate(withDuration: 0.3, animations: { 
+                self.view.layoutIfNeeded()
+            }, completion: { _ in
+                self.headerImageScrollView.isHidden = true
+            })
         }
     }
 }
