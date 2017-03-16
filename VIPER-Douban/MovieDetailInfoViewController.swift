@@ -8,10 +8,16 @@
 
 import UIKit
 
+protocol MovieDetailInfoTouchBarDelegate: class {
+    func handleTouchBarTouchedAction()
+}
+
 class MovieDetailInfoViewController: UIViewController {
     
     var scrollView = UIScrollView()
     var mainImageView = UIImageView()
+    var touchBar = UIView()
+    weak var touchBarDelegate: MovieDetailInfoTouchBarDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,8 +51,28 @@ class MovieDetailInfoViewController: UIViewController {
         holderView2.heightAnchor.constraint(equalToConstant: 900).isActive = true
         holderView2.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
         
-//        mainImageView.translatesAutoresizingMaskIntoConstraints = false
-//        scrollView.addSubview(mainImageView)
-        
+        touchBar.translatesAutoresizingMaskIntoConstraints = false
+        touchBar.backgroundColor = UIColor.black
+        touchBar.alpha = 0.3
+        view.addSubview(touchBar)
+        touchBar.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        touchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        touchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        touchBar.heightAnchor.constraint(equalToConstant: 44).isActive = true
+        hideTouchBar()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(touchBarTapped))
+        touchBar.addGestureRecognizer(tap)
+    }
+    
+    func showTouchBar() {
+        touchBar.isHidden = false
+    }
+    
+    func hideTouchBar() {
+        touchBar.isHidden = true
+    }
+    
+    func touchBarTapped() {
+        touchBarDelegate?.handleTouchBarTouchedAction()
     }
 }

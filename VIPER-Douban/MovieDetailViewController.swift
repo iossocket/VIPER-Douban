@@ -89,6 +89,7 @@ class MovieDetailViewController: UIViewController {
     }
     
     private func configChildViewController() {
+        infoVC.touchBarDelegate = self
         infoVC.scrollView.tag = 1001
         infoVC.scrollView.delegate = self
         addChildViewController(infoVC)
@@ -146,13 +147,28 @@ extension MovieDetailViewController: UIScrollViewDelegate {
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         if scrollView.tag == 1001 && scrollView.contentOffset.y < -20 {
             view.layoutIfNeeded()
-            self.top.constant = UIScreen.main.bounds.height
-            self.bottom.constant = UIScreen.main.bounds.height
+            self.top.constant = UIScreen.main.bounds.height - 44
+            self.bottom.constant = UIScreen.main.bounds.height - 44
             UIView.animate(withDuration: 0.3, animations: { 
                 self.view.layoutIfNeeded()
             }, completion: { _ in
                 self.headerImageScrollView.isHidden = true
+                self.infoVC.showTouchBar()
             })
         }
+    }
+}
+
+extension MovieDetailViewController: MovieDetailInfoTouchBarDelegate {
+    func handleTouchBarTouchedAction() {
+        view.layoutIfNeeded()
+        self.top.constant = 0
+        self.bottom.constant = 0
+        self.infoVC.hideTouchBar()
+        UIView.animate(withDuration: 0.3, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: { _ in
+            self.headerImageScrollView.isHidden = false
+        })
     }
 }
