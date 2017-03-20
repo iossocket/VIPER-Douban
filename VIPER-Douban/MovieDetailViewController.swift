@@ -42,6 +42,7 @@ class MovieDetailViewController: UIViewController {
         navigationController?.navigationBar.isHidden = false
         isHeroEnabled = true
         view.heroModifiers = [.fade]
+        infoVC.mainImageView.heroID = movieImageUrl
         let backItem = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(back))
         backItem.image = UIImage(named: "back")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
         navigationItem.leftBarButtonItem = backItem

@@ -16,6 +16,7 @@ class MovieDetailInfoViewController: UIViewController {
     
     var scrollView = UIScrollView()
     var mainImageView = UIImageView()
+    var holderView2 = UIView()
     var touchBar = UIView()
     weak var touchBarDelegate: MovieDetailInfoTouchBarDelegate?
     
@@ -29,7 +30,6 @@ class MovieDetailInfoViewController: UIViewController {
         scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
-        
         let holderView = UIView()
         holderView.backgroundColor = UIColor.clear
         holderView.translatesAutoresizingMaskIntoConstraints = false
@@ -41,7 +41,20 @@ class MovieDetailInfoViewController: UIViewController {
         holderView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         holderView.heightAnchor.constraint(equalToConstant: view.bounds.width * 0.618).isActive = true
         
-        let holderView2 = UIView()
+        mainImageView.translatesAutoresizingMaskIntoConstraints = false
+        mainImageView.backgroundColor = UIColor.black
+        scrollView.addSubview(mainImageView)
+        mainImageView.heightAnchor.constraint(equalToConstant: 130).isActive = true
+        mainImageView.widthAnchor.constraint(equalToConstant: 110).isActive = true
+        mainImageView.leadingAnchor.constraint(equalTo: holderView.leadingAnchor, constant: 20).isActive = true
+        mainImageView.topAnchor.constraint(equalTo: holderView.bottomAnchor, constant: -65).isActive = true
+        mainImageView.layer.zPosition = 100
+        mainImageView.contentMode = .scaleAspectFill
+        mainImageView.clipsToBounds = true
+        if let heroID = mainImageView.heroID {
+            mainImageView.kf.setImage(with: URL(string: heroID))
+        }
+        
         holderView2.backgroundColor = UIColor.white
         holderView2.translatesAutoresizingMaskIntoConstraints = false
         scrollView.addSubview(holderView2)
