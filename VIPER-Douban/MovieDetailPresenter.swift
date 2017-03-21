@@ -8,11 +8,14 @@
 
 import UIKit
 
-struct MovieDetailPresenter {
+protocol MovieDetailPresenterProtocol {
+    var numberOfItem: Int { get }
+    func getSize(by index: Int, width: CGFloat) -> CGSize
+    
+}
+
+struct MovieDetailPresenter: MovieDetailPresenterProtocol {
     let numberOfItem: Int = 21
-    let items = [
-        UIImageView(image: UIImage(named: "1"))
-    ]
     
     func getSize(by index: Int, width: CGFloat) -> CGSize {
         if index == 0 {

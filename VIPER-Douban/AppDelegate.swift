@@ -26,8 +26,8 @@ let container = Container() { c in
     c.register(ComingSoonMovieInteractorProtocol.self) { _ in ComingSoonMovieInteractor() }
     c.register(Top250InteractorProtocol.self) { _ in Top250Interactor() }
     c.register(Client.self) { _ in AlamofireClient()}
-    c.register(HorizontalSectionPresenterProtocol.self) { _ in HorizontalSectionPresenter(currentType: .inTheatre)}
-    c.register(MovieRLMInteractorProtocol.self) { _ in
-        MovieRLMInteractor()
-    }
+    c.register(HorizontalSectionPresenterProtocol.self) { _ in HorizontalSectionPresenter(currentType: .inTheatre) }
+    c.register(MovieRLMInteractorProtocol.self) { _ in MovieRLMInteractor() }
+    c.register(MovieDetailPresenterProtocol.self) { _ in MovieDetailPresenter() }
+    c.register(MovieDetailInfoPresenterProtocol.self) { _ in MovieDetailInfoPresenter() }
 }

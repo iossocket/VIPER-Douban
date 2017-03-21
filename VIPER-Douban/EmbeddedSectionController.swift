@@ -45,6 +45,6 @@ class EmbeddedSectionController: IGListSectionController, IGListSectionType {
     }
     
     func didSelectItem(at index: Int) {
-        SuggestionRouter().showDetailViewController(from: viewController, by: data?.imageUrl)
+        SuggestionRouter().showDetailViewController(from: viewController, by: data?.imageUrl, id: data?.id)
     }
 }

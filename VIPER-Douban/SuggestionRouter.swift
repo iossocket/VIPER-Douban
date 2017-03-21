@@ -9,13 +9,11 @@
 import UIKit
 
 struct SuggestionRouter {
-    func showDetailViewController(from viewController: UIViewController?, by imageViewUrl: String?) {
-        guard let vc = viewController, let url = imageViewUrl else {
+    func showDetailViewController(from viewController: UIViewController?, by imageViewUrl: String?, id: String?) {
+        guard let vc = viewController, let url = imageViewUrl, let id = id else {
             return
         }
-        let detail = MovieDetailViewController()
-        
-        detail.movieImageUrl = url
+        let detail = MovieDetailViewController(imageUrl: url, id: id)
         vc.show(detail, sender: nil)
     }
 }

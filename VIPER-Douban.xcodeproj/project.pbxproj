@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2949DE589000B74004234BD7 /* Pods_VIPER_Douban.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 856A817414641CF71AC43A0F /* Pods_VIPER_Douban.framework */; };
 		83630AB3D75C90486B73B8B2 /* Pods_VIPER_DoubanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00EF110DC2D3780AE9C1CCA7 /* Pods_VIPER_DoubanTests.framework */; };
+		D00B6C1E1E7FD9AE00260DDB /* MovieDetailInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00B6C1D1E7FD9AE00260DDB /* MovieDetailInfoPresenter.swift */; };
 		D05687221E5E5C82004CF504 /* TypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05687211E5E5C82004CF504 /* TypeCell.swift */; };
 		D05687241E5E5ED5004CF504 /* TypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D05687231E5E5ED5004CF504 /* TypeCell.xib */; };
 		D05687261E5FA9CE004CF504 /* HorizontalSectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05687251E5FA9CE004CF504 /* HorizontalSectionPresenter.swift */; };
@@ -79,6 +80,7 @@
 		582C12E5D8CD629D75666390 /* Pods-VIPER-Douban.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-Douban.release.xcconfig"; path = "Pods/Target Support Files/Pods-VIPER-Douban/Pods-VIPER-Douban.release.xcconfig"; sourceTree = "<group>"; };
 		6B7E83D706BFD8BC50494D19 /* Pods-VIPER-Douban.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-Douban.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VIPER-Douban/Pods-VIPER-Douban.debug.xcconfig"; sourceTree = "<group>"; };
 		856A817414641CF71AC43A0F /* Pods_VIPER_Douban.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPER_Douban.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D00B6C1D1E7FD9AE00260DDB /* MovieDetailInfoPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailInfoPresenter.swift; sourceTree = "<group>"; };
 		D05687211E5E5C82004CF504 /* TypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeCell.swift; sourceTree = "<group>"; };
 		D05687231E5E5ED5004CF504 /* TypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TypeCell.xib; sourceTree = "<group>"; };
 		D05687251E5FA9CE004CF504 /* HorizontalSectionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalSectionPresenter.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 				D0F80AAC1E77D64300A32331 /* MovieDetailInfoViewController.swift */,
 				D0F80A711E76810500A32331 /* MovieGallaryCollectionViewCell.swift */,
 				D0F80A731E76871800A32331 /* MovieDetailPresenter.swift */,
+				D00B6C1D1E7FD9AE00260DDB /* MovieDetailInfoPresenter.swift */,
 			);
 			name = Detail;
 			sourceTree = "<group>";
@@ -643,6 +646,7 @@
 				D0636D621E5AEED10034E7B0 /* MovieItemCell.swift in Sources */,
 				D08BF7681E588276000AE159 /* Request.swift in Sources */,
 				D08BF7711E588ADF000AE159 /* InTheatreMovieRequest.swift in Sources */,
+				D00B6C1E1E7FD9AE00260DDB /* MovieDetailInfoPresenter.swift in Sources */,
 				D0F1AA8B1E63ABEB00069465 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

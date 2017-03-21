@@ -18,7 +18,9 @@ class MovieDetailInfoViewController: UIViewController {
     var mainImageView = UIImageView()
     var holderView2 = UIView()
     var touchBar = UIView()
+    var movieId: String!
     weak var touchBarDelegate: MovieDetailInfoTouchBarDelegate?
+    var presenter = container.resolve(MovieDetailInfoPresenterProtocol.self)!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +77,8 @@ class MovieDetailInfoViewController: UIViewController {
         hideTouchBar()
         let tap = UITapGestureRecognizer(target: self, action: #selector(touchBarTapped))
         touchBar.addGestureRecognizer(tap)
+        
+        print(presenter.fetchCurrentMovie(by: movieId) ?? "")
     }
     
     func showTouchBar() {
@@ -87,5 +91,13 @@ class MovieDetailInfoViewController: UIViewController {
     
     func touchBarTapped() {
         touchBarDelegate?.handleTouchBarTouchedAction()
+    }
+}
+
+extension MovieDetailInfoViewController {
+    convenience init(imageUrl: String, id: String) {
+        self.init()
+        self.movieId = id
+        self.mainImageView.heroID = imageUrl
     }
 }

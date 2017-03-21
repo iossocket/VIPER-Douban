@@ -12,10 +12,9 @@ import Kingfisher
 
 class MovieDetailViewController: UIViewController {
     
-    var movieImageUrl: String!
     var collectionView: UICollectionView!
-    let presenter = MovieDetailPresenter()
-    let infoVC = MovieDetailInfoViewController()
+    let presenter = container.resolve(MovieDetailPresenterProtocol.self)
+    var infoVC: MovieDetailInfoViewController!
     var headerImageScrollView: UIScrollView!
     var top: NSLayoutConstraint!
     var bottom: NSLayoutConstraint!
@@ -42,7 +41,6 @@ class MovieDetailViewController: UIViewController {
         navigationController?.navigationBar.isHidden = false
         isHeroEnabled = true
         view.heroModifiers = [.fade]
-        infoVC.mainImageView.heroID = movieImageUrl
         let backItem = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(back))
         backItem.image = UIImage(named: "back")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
         navigationItem.leftBarButtonItem = backItem
@@ -107,6 +105,13 @@ class MovieDetailViewController: UIViewController {
     }
 }
 
+extension MovieDetailViewController {
+    convenience init(imageUrl: String, id: String) {
+        self.init()
+        self.infoVC = MovieDetailInfoViewController(imageUrl: imageUrl, id: id)
+    }
+}
+
 extension MovieDetailViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 11
@@ -122,7 +127,7 @@ extension MovieDetailViewController: UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return presenter.getSize(by: indexPath.item, width: collectionView.bounds.width)
+        return presenter!.getSize(by: indexPath.item, width: collectionView.bounds.width)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
