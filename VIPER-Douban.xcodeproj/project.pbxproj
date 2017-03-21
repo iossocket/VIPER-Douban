@@ -171,6 +171,33 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D00B6C2D1E81295B00260DDB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D00B6C2F1E81297800260DDB /* Cell */,
+				D0DCD2431E6CED3B00A768C5 /* MovieDetailViewController.swift */,
+				D0F80AAC1E77D64300A32331 /* MovieDetailInfoViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D00B6C2E1E81296600260DDB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D0F80A731E76871800A32331 /* MovieDetailPresenter.swift */,
+				D00B6C1D1E7FD9AE00260DDB /* MovieDetailInfoPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		D00B6C2F1E81297800260DDB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D0F80A711E76810500A32331 /* MovieGallaryCollectionViewCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		D0636D791E5BDDAD0034E7B0 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,11 +294,8 @@
 		D08C05511E6D8E2100017890 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				D0DCD2431E6CED3B00A768C5 /* MovieDetailViewController.swift */,
-				D0F80AAC1E77D64300A32331 /* MovieDetailInfoViewController.swift */,
-				D0F80A711E76810500A32331 /* MovieGallaryCollectionViewCell.swift */,
-				D0F80A731E76871800A32331 /* MovieDetailPresenter.swift */,
-				D00B6C1D1E7FD9AE00260DDB /* MovieDetailInfoPresenter.swift */,
+				D00B6C2E1E81296600260DDB /* Presenter */,
+				D00B6C2D1E81295B00260DDB /* View */,
 			);
 			name = Detail;
 			sourceTree = "<group>";
